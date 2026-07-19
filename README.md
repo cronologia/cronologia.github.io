@@ -48,6 +48,7 @@ page and check the same sources.
 | [`fsp`](https://github.com/cronologia/fsp) | **Foro de São Paulo** — the conference of Latin American left-wing parties, founded 1990 | [/fsp/](https://cronologia.github.io/fsp/) |
 | [`fsspx`](https://github.com/cronologia/fsspx) | **Fraternidade Sacerdotal São Pio X** — the traditionalist priestly society founded by Marcel Lefebvre, 1970 | [/fsspx/](https://cronologia.github.io/fsspx/) |
 | [`tl`](https://github.com/cronologia/tl) | **Teologia da Libertação** — the Latin American theological movement, 1968– | [/tl/](https://cronologia.github.io/tl/) |
+| [`tariqa`](https://github.com/cronologia/tariqa) | **Tariqa Maryamiyya** — Frithjof Schuon's Sufi order and the Traditionalist School, with its crossovers into Catholic traditionalism and Brazil | [/tariqa/](https://cronologia.github.io/tariqa/) |
 
 ### Support repositories
 
@@ -57,7 +58,7 @@ page and check the same sources.
 | [`glossary`](https://github.com/cronologia/glossary) | Shared glossary — cited definitions with one stable anchor per term ([site](https://cronologia.github.io/glossary/)) |
 | `archive` (private) | Internal vault for sources shared across projects; reader-facing citations use original URLs + Wayback snapshots |
 
-The three chronologies form two threads that cross in Brazil: the **Latin American left**
+The chronologies form two threads that cross in Brazil: the **Latin American left**
 (fsp, fed by the church base communities documented in tl) and **Catholicism
 after Vatican II** (tl on one side, fsspx on the other). Candidate projects to
 extend those threads — Vatican II, the PT, the Grupo de Puebla, CELAM, the TFP
