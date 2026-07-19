@@ -50,6 +50,10 @@ page and check the same sources.
 | [`tl`](https://github.com/cronologia/tl) | **Teologia da Libertação** — the Latin American theological movement, 1968– | [/tl/](https://cronologia.github.io/tl/) |
 | [`tariqa`](https://github.com/cronologia/tariqa) | **Tariqa Maryamiyya** — Frithjof Schuon's Sufi order and the Traditionalist School, with its crossovers into Catholic traditionalism and Brazil | [/tariqa/](https://cronologia.github.io/tariqa/) |
 | [`perennialism`](https://github.com/cronologia/perennialism) | **Perennialism** — the Traditionalist School as a movement of ideas: the books, journals and receptions (the order's history lives in `tariqa`) | [/perennialism/](https://cronologia.github.io/perennialism/) |
+| [`celam`](https://github.com/cronologia/celam) | **CELAM** — the Latin American bishops' council as an institution, 1955– (interpretation disputes live in `tl`) | [/celam/](https://cronologia.github.io/celam/) |
+| [`grupopuebla`](https://github.com/cronologia/grupopuebla) | **Grupo de Puebla** — the progressive forum of individuals founded 2019, disambiguated from the Foro de São Paulo | [/grupopuebla/](https://cronologia.github.io/grupopuebla/) |
+| [`tfp`](https://github.com/cronologia/tfp) | **TFP / Plinio Corrêa de Oliveira** — the lay traditionalist movement founded 1960, its campaigns, split and heirs | [/tfp/](https://cronologia.github.io/tfp/) |
+| [`rcc`](https://github.com/cronologia/rcc) | **Renovação Carismática Católica** — the Catholic Charismatic Renewal, 1967–, with the Brazilian movement | [/rcc/](https://cronologia.github.io/rcc/) |
 
 ### Support repositories
 
