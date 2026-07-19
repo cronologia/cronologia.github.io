@@ -54,6 +54,10 @@
     .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
     .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
     .principles strong { display: block; margin-bottom: .2rem; }
+    .master-banner { display: block; background: linear-gradient(135deg, #23283a, #3b4257); color: #fff; border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; margin: 0 0 1.75rem; }
+    .master-banner:hover { box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+    .master-banner strong { font-size: 1.05rem; }
+    .master-banner span { display: block; font-size: .88rem; opacity: .85; margin-top: .15rem; }
     .roadmap { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #c47f17; border-radius: 6px; padding: .9rem 1.1rem; font-size: .95rem; }
     .roadmap a { color: #9a6410; font-weight: 600; }
     .site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .85rem; }
@@ -72,6 +76,11 @@
     </div>
   </header>
   <main class="wrap">
+    <a class="master-banner" href="/chronology/">
+      <strong>⏳ Master chronology →</strong>
+      <span>All 282 events of the nine projects on one filterable timeline — see the intersections
+      side by side.</span>
+    </a>
     <h2>Projects</h2>
     <div class="projects">
       <a class="project p-fsp" href="/fsp/">

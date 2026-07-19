@@ -1,0 +1,2410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Master chronology — Cronologia</title>
+  <meta name="description" content="Every event of the Cronologia family on one timeline: nine source-referenced chronologies of Latin American political and religious history, merged and filterable by project." />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9LV1QZHVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9LV1QZHVE');
+  </script>
+  <style>
+    :root { --bg: #faf8f5; --surface: #ffffff; --ink: #1d2330; --muted: #6b7280; --line: #e4e0d8; --maxw: 920px; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+    .site-header { background: linear-gradient(135deg, #23283a, #3b4257); color: #fff; padding: 2.25rem 0 1.5rem; }
+    .site-header h1 { margin: 0 0 .25rem; font-size: 1.9rem; letter-spacing: -.5px; }
+    .site-header p { margin: 0; opacity: .92; max-width: 70ch; }
+    .site-header a.home { color: #cfd6e4; font-size: .85rem; text-decoration: none; }
+    .filters { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); padding: .6rem 0; }
+    .filters .wrap { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+    .chip { border: 1.5px solid var(--pc, #888); background: var(--pc, #888); color: #fff; font: inherit; font-size: .78rem; font-weight: 600; padding: .25rem .65rem; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+    .chip:not(.on) { background: transparent; color: var(--pd, #555); opacity: .65; }
+    .chip .n { opacity: .8; font-weight: 400; }
+    .chip-all { --pc: #3b4257; --pd: #23283a; }
+    .chip-fsp { --pc: #b8252b; --pd: #7a1418; }
+    .ev-fsp { border-left-color: #b8252b; } .ev-fsp .ev-project { color: #7a1418; }
+    .chip-fsspx { --pc: #1e4f8f; --pd: #12365f; }
+    .ev-fsspx { border-left-color: #1e4f8f; } .ev-fsspx .ev-project { color: #12365f; }
+    .chip-tl { --pc: #1b7a3d; --pd: #114f27; }
+    .ev-tl { border-left-color: #1b7a3d; } .ev-tl .ev-project { color: #114f27; }
+    .chip-tariqa { --pc: #0e7490; --pd: #0a4e60; }
+    .ev-tariqa { border-left-color: #0e7490; } .ev-tariqa .ev-project { color: #0a4e60; }
+    .chip-perennialism { --pc: #5b21b6; --pd: #3b1580; }
+    .ev-perennialism { border-left-color: #5b21b6; } .ev-perennialism .ev-project { color: #3b1580; }
+    .chip-celam { --pc: #831843; --pd: #5a0f2e; }
+    .ev-celam { border-left-color: #831843; } .ev-celam .ev-project { color: #5a0f2e; }
+    .chip-grupopuebla { --pc: #c2410c; --pd: #8a2d08; }
+    .ev-grupopuebla { border-left-color: #c2410c; } .ev-grupopuebla .ev-project { color: #8a2d08; }
+    .chip-tfp { --pc: #713f12; --pd: #4a290b; }
+    .ev-tfp { border-left-color: #713f12; } .ev-tfp .ev-project { color: #4a290b; }
+    .chip-rcc { --pc: #be185d; --pd: #831244; }
+    .ev-rcc { border-left-color: #be185d; } .ev-rcc .ev-project { color: #831244; }
+    main { padding: 1.5rem 1.25rem 3rem; }
+    .decade { font-size: 1.15rem; border-bottom: 2px solid var(--line); padding-bottom: .3rem; margin: 2rem 0 .8rem; color: var(--muted); }
+    .ev { display: grid; grid-template-columns: 4.2rem 1fr; gap: .9rem; background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #888; border-radius: 6px; padding: .65rem .9rem; margin: 0 0 .55rem; }
+    .ev.hidden { display: none; }
+    .ev-year { font-weight: 700; font-size: .95rem; padding-top: .1rem; }
+    .ev-project { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+    .ev-body h3 { margin: .05rem 0 .2rem; font-size: 1rem; }
+    .ev-body h3 a { color: inherit; text-decoration: none; }
+    .ev-body h3 a:hover { text-decoration: underline; }
+    .ev-body p { margin: 0; font-size: .88rem; color: var(--muted); }
+    .flag { color: #b45309; font-weight: 700; }
+    .site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .85rem; }
+    .site-footer a { color: var(--muted); }
+    @media (max-width: 560px) {
+      .site-header { padding: 1.3rem 0 1rem; }
+      .site-header h1 { font-size: 1.4rem; }
+      .filters .wrap { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .filters .wrap::-webkit-scrollbar { display: none; }
+      .ev { grid-template-columns: 3.2rem 1fr; gap: .6rem; }
+    }
+    @media print {
+      .filters { display: none; }
+      .ev { break-inside: avoid; border: none; border-left: 3px solid #888; padding: .3rem .6rem; }
+      .site-header { background: none; color: #000; }
+      .site-header a.home { display: none; }
+      a { text-decoration: none; color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="home" href="/">← Cronologia</a>
+      <h1>Master chronology</h1>
+      <p>Every event of the nine project chronologies on one timeline — filter by project, click any
+      event for the full cited entry on its project site. Intersections the projects document
+      separately become visible side by side here.</p>
+    </div>
+  </header>
+  <div class="filters">
+    <div class="wrap">
+      <button class="chip chip-all" id="toggle-all">All</button>
+        <button class="chip chip-fsp on" data-project="fsp">Foro de São Paulo <span class="n">28</span></button>
+        <button class="chip chip-fsspx on" data-project="fsspx">FSSPX <span class="n">46</span></button>
+        <button class="chip chip-tl on" data-project="tl">Teologia da Libertação <span class="n">39</span></button>
+        <button class="chip chip-tariqa on" data-project="tariqa">Tariqa Maryamiyya <span class="n">28</span></button>
+        <button class="chip chip-perennialism on" data-project="perennialism">Perennialism <span class="n">36</span></button>
+        <button class="chip chip-celam on" data-project="celam">CELAM <span class="n">23</span></button>
+        <button class="chip chip-grupopuebla on" data-project="grupopuebla">Grupo de Puebla <span class="n">22</span></button>
+        <button class="chip chip-tfp on" data-project="tfp">TFP <span class="n">32</span></button>
+        <button class="chip chip-rcc on" data-project="rcc">RCC <span class="n">28</span></button>
+    </div>
+  </div>
+  <main class="wrap">
+      <h2 class="decade">Before 1900</h2>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1540</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Steuco coins 'philosophia perennis'</a></h3>
+          <p>Agostino Steuco's 'De perenni philosophia' introduces the term — for a continuity thesis inside Christian Platonism, centuries before and apart from the Guénonian school.</p>
+        </div>
+      </article>
+      <h2 class="decade">1900s</h2>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1901</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Protestant precursor: modern Pentecostalism</a></h3>
+          <p>The Topeka outpouring (1901) and the Azusa Street revival (1906) launch modern Pentecostalism — context for, not part of, the Catholic movement.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1908</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Birth of Plinio Corrêa de Oliveira</a></h3>
+          <p>Born into a traditional paulista family; Jesuit schooling (Colégio São Luís), law at the future USP.</p>
+        </div>
+      </article>
+      <h2 class="decade">1910s</h2>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1912 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Guénon's Sufi affiliation</a></h3>
+          <p>René Guénon adopts Islam in the Shadhili lineage transmitted through Ivan Aguéli (Abd al-Hadi); sources date the affiliation 1912 and the initiation itself variously c. 1910–1912.</p>
+        </div>
+      </article>
+      <h2 class="decade">1920s</h2>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1921</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">'Le Théosophisme'</a></h3>
+          <p>Guénon publishes his critical history of the Theosophical Society — the Traditionalist critique of modern 'counter-tradition' begins in print.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1921</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Guénon's first books</a></h3>
+          <p>'Introduction générale à l'étude des doctrines hindoues' frames 'Tradition' against modernity; 'Le Théosophisme' separates the school-to-be from occultism and Theosophy.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1923</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'L'Erreur spirite'</a></h3>
+          <p>Guénon's companion polemic against Spiritism completes the boundary-drawing against the occult milieu.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1924</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">'Orient et Occident'</a></h3>
+          <p>Guénon's book marks his break with the French Catholic intellectuals among whom he had first written.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1924</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Orient et Occident'</a></h3>
+          <p>Guénon's program for a Western elite reoriented by Eastern metaphysics — and his break with the Catholic intellectuals among whom he had first written.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1925 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'L'Homme et son devenir selon le Vêdânta'</a></h3>
+          <p>Guénon's central metaphysical exposition; the standard date is 1925, though a derived source gives 1927 — flagged until checked against a critical bibliography.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1925</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">The Regnabit episode</a></h3>
+          <p>Guénon contributes nineteen articles (August 1925 – May 1927) to the Catholic Sacred Heart review Regnabit, drawn in by the symbolist scholar Louis Charbonneau-Lassay — the high point of his attempted rapprochement with Catholic milieux, ended by his withdrawal under Catholic criticism.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1927 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">'La Crise du monde moderne'</a></h3>
+          <p>Guénon publishes the school's most famous statement of civilizational critique.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1927</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'La Crise du monde moderne'</a></h3>
+          <p>The school's most-read statement of civilizational critique — the template for all its later 'crisis' literature.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1928</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The Marian Congregations</a></h3>
+          <p>Plinio joins São Paulo's Marian Congregations — the milieu from which his group would grow.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1929</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Autorité spirituelle et pouvoir temporel'</a></h3>
+          <p>Guénon asserts the priority of the sacerdotal over the royal — the doctrinal fault line that would divide him from Evola.</p>
+        </div>
+      </article>
+      <h2 class="decade">1930s</h2>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1930</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Guénon moves to Cairo</a></h3>
+          <p>He lives there as Abd al-Wahid Yahya until his death, marrying Fatima Ibrahim (1934) and taking Egyptian citizenship (1949).</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1930</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Guénon settles in Cairo</a></h3>
+          <p>He writes thereafter as a Muslim while addressing a mainly French readership, until his death in 1951.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1932 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Schuon initiated in the Alawiyya</a></h3>
+          <p>Frithjof Schuon enters Islam and is initiated at the zawiya of Shaykh Ahmad al-Alawi, receiving the name Isa Nur ad-Din; Wikipedia's own articles date the stay 1932 or 1933–34 — the discrepancy is recorded, not resolved.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1932</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Coomaraswamy's metaphysical turn</a></h3>
+          <p>The Boston Museum of Fine Arts curator shifts from art history to studies of tradition, myth and metaphysics — the essays of 1932–1947 make him the school's comparativist of 'traditional art', Vedanta and Platonism.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1933</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Youngest constituent deputy</a></h3>
+          <p>Co-founder of the Liga Eleitoral Católica, Plinio is elected to the National Constituent Assembly on São Paulo's Chapa Única at 24 — the youngest deputy of the Constituinte (sympathetic sources add 'most voted in the country'; attributed). The 1934 Constitution incorporated points of the Catholic platform.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1934</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Evola's 'Revolt Against the Modern World'</a></h3>
+          <p>Julius Evola's political-heroic adaptation of Traditionalism subordinates the priestly to the regal — against Guénon's 1929 position; Guénon's review rejected key theses while granting the work's interest.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1935 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Director of O Legionário</a></h3>
+          <p>Plinio directs the archdiocesan weekly O Legionário — named director in August 1933 per movement sources, effective from about 1935 per Wikipedia; the divergence is recorded. He leaves the paper in 1947.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1935</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Schuon made muqaddam</a></h3>
+          <p>Shaykh Adda ben Tounes, al-Alawi's successor, authorizes Schuon to initiate aspirants into the Alawi order in Europe.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1936</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Independent shaykh</a></h3>
+          <p>Schuon assumes the function of shaykh of an independent branch. Followers' accounts describe a divine investiture confirmed by disciples' dreams; Sedgwick treats it as self-authorization — both framings are attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1936</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Études Traditionnelles' is born</a></h3>
+          <p>Le Voile d'Isis (founded 1889) is renamed Études Traditionnelles, reflecting Guénon's dominance of the review — the school's house journal until 1992, with a wartime gap 1940–45.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1939</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Peaks and Lamas'</a></h3>
+          <p>Marco Pallis's best-selling mountaineering-and-Buddhism book carries a Traditionalist reading of Tibet to a wide audience.</p>
+        </div>
+      </article>
+      <h2 class="decade">1940s</h2>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1940</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">President of São Paulo's Catholic Action</a></h3>
+          <p>First president of the Archdiocesan Junta of Catholic Action (to 1944).</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1940</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Look to the Land' coins 'organic farming'</a></h3>
+          <p>Lord Northbourne — later a Traditionalist author and translator of Guénon — introduces the term 'organic farming', framing agriculture as a clash of worldviews; the school's most unexpected export.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1941</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">The order settles in Lausanne</a></h3>
+          <p>Schuon directs the order from Lausanne for four decades (1941–1980).</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1943</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">'Em Defesa da Ação Católica'</a></h3>
+          <p>Plinio's polemic against 'progressive'/Maritainian currents in Catholic Action, prefaced by nuncio Aloisi Masella — a storm of controversy that begins his estrangement from the paulista curia.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1945</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'The Reign of Quantity'</a></h3>
+          <p>Guénon's summa on modernity as the reign of quantity is published in the Liberation moment.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1945</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Huxley's other 'Perennial Philosophy'</a></h3>
+          <p>Aldous Huxley's bestselling anthology popularizes the phrase in a universalist-mystical sense — indifferent to orthodoxy and initiation — that the Guénonians rejected as syncretism. Same words, different lineage.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1947</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Break with the curia</a></h3>
+          <p>Under the new archbishop Carlos Carmelo de Vasconcelos Motta, Plinio loses the Catholic Action presidency (1944) and the Legionário direction (1947) — ecclesial ostracism. Sympathetic sources highlight a laudatory 1949 letter signed by Msgr. Montini in Pius XII's name; the document is reproduced only by movement sites, so it is recorded as their claim.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1947</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">The Plains Indian dimension begins</a></h3>
+          <p>After reading 'Black Elk Speaks', Schuon initiates contact with Lakota tradition-holders; he and his wife are later adopted into the Sioux family of Chief James Red Cloud (1959) and by Thomas Yellowtail into the Crow (1984).</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1947</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Death of Ananda Coomaraswamy</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1948</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">'The Transcendent Unity of Religions'</a></h3>
+          <p>Schuon publishes his best-known statement of perennialism (English translation 1953).</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1948</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'The Transcendent Unity of Religions'</a></h3>
+          <p>Schuon's classic statement of the transcendent unity of religions (English 1953); T. S. Eliot: 'I have met with no more impressive work in the comparative study of Oriental and Occidental religion.'</p>
+        </div>
+      </article>
+      <h2 class="decade">1950s</h2>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1950</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">The Vâlsan split</a></h3>
+          <p>Per Sedgwick: disciples object to Schuon's relaxation of Islamic practice; Guénon encourages Michel Vâlsan to separate the Paris branch, and Vâlsan establishes an independent, sharia-observant Alawiyya line with Guénon's approval.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1951</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Catolicismo founded</a></h3>
+          <p>The monthly Catolicismo is founded under the patronage of Bishop Antônio de Castro Mayer of Campos — the group's platform for the next decade.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1951</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Death of René Guénon</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1951</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Death of René Guénon</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1951</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Evola tried and acquitted</a></h3>
+          <p>Arrested as alleged ideologue of the neofascist FAR, Evola declares himself 'superfascista' while denying party fascism, and is acquitted — the trial that fixes his postwar political persona.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1955 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CELAM founded</a></h3>
+          <p>The Latin American Episcopal Council is created at the first General Conference of Latin American bishops.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1955</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">I General Conference</a></h3>
+          <p>Convoked by Pius XII, the first General Conference of the Latin American Episcopate petitions for a permanent coordinating body.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1955 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Pius XII approves CELAM</a></h3>
+          <p>The pope approves the creation of the Consejo Episcopal Latinoamericano; one source records a 24 September approval with the formal founding document on 2 November — the sequence is recorded, not resolved.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1956 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Secretariat in Bogotá; first Assembly</a></h3>
+          <p>Bogotá is designated as seat (Rome having been considered and rejected, per DHIAL); the first ordinary General Assembly elects Cardinal Jaime de Barros Câmara (Rio) first president.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1958</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Sacred Art in East and West'</a></h3>
+          <p>Titus Burckhardt's canonical Traditionalist theory of sacred art across five traditions (English translation by Lord Northbourne).</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1958</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'The Religions of Man'</a></h3>
+          <p>Huston Smith's textbook (later 'The World's Religions') dominates American comparative-religion teaching; his openly perennialist 'Forgotten Truth' (1976) follows under Schuon's influence.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1958</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">CAL created</a></h3>
+          <p>Pius XII creates the Pontifical Commission for Latin America in the Roman Curia — CELAM's standing liaison with the Holy See.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1959</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">CLAR erected</a></h3>
+          <p>The Holy See erects the Confederación Latinoamericana de Religiosos, CELAM's sister body for religious life.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1959</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">'Revolução e Contra-Revolução'</a></h3>
+          <p>Published in Catolicismo's 100th issue: the movement's doctrinal matrix, reading modern history as a five-century 'Revolution' and calling for a 'Counter-Revolution' — Plinio's technical vocabulary, attributed to the text.</p>
+        </div>
+      </article>
+      <h2 class="decade">1960s</h2>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1960</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">TFP founded</a></h3>
+          <p>The Sociedade Brasileira de Defesa da Tradição, Família e Propriedade is founded; co-founders include Adolpho Lindenberg, Plinio Vidigal Xavier da Silveira and José Fernando de Camargo — the lists vary slightly between sources.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1960</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">'Reforma Agrária: Questão de Consciência'</a></h3>
+          <p>Four authors — Bishop Geraldo de Proença Sigaud, Bishop Antônio de Castro Mayer, Plinio Corrêa de Oliveira and the economist Luiz Mendonça de Freitas — publish the anti-agrarian-reform manifesto; about 30,000 copies over four editions (movement figures, attributed).</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1961</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Evola's postwar canon</a></h3>
+          <p>'Men Among the Ruins' (1953) and 'Ride the Tiger' (1961) join 'Revolt' as the canon of the postwar Italian radical right, of which scholarship describes Evola as chief ideologue.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1961 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Understanding Islam'</a></h3>
+          <p>Schuon's most popular book (French 1961, English 1963) becomes a key channel of perennialism into Islamic studies; the French first-edition year awaits confirmation against the standard bibliography.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1961 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">ISAL founded</a></h3>
+          <p>Iglesia y Sociedad en América Latina, the radicalizing Protestant 'church and society' network (Alves, Shaull, Míguez Bonino), a precursor stream; sources differ on the founding consultation's exact venue.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1962</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Second Vatican Council opens</a></h3>
+          <p>The Council (1962–1965) opens the space that Latin American bishops later 'receive' at Medellín.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1963</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The Coetus Internationalis Patrum</a></h3>
+          <p>Sigaud, Castro Mayer and Marcel Lefebvre articulate the conservative minority of Vatican II; movement sources describe Plinio as the group's lay strategist — that role rests on sympathetic sources and is attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1965 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The street campaigns</a></h3>
+          <p>Caravans under red standards with a golden lion, public rosaries and signature drives against communism and 'socialist and confiscatory' agrarian reform make the TFP a fixture of Brazilian streets.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1965</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">The Marian visions</a></h3>
+          <p>Schuon reports visions of the Virgin Mary ('Marian graces') and thereafter regards Mary as the order's spiritual protectress — the origin of the order's distinctive Marian devotion.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1965 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Expansion to nine departments</a></h3>
+          <p>CELAM grows from two sub-departments to nine specialized departments (education, liturgy, seminaries, social action…).</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1966</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Death of Camilo Torres</a></h3>
+          <p>The Colombian priest and sociologist, who had joined the ELN guerrilla, is killed in his first combat; later invoked as a precursor symbol, though his choice of armed struggle was not representative of liberation theologians.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1966</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Death of Manuel Larraín</a></h3>
+          <p>The president dies in a car accident; the X Ordinary Assembly (Mar del Plata 1966) elects Avelar Brandão Vilela to complete the term.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1967</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Bloomington chapter founded</a></h3>
+          <p>Indiana University professor Victor Danner founds the Bloomington chapter, which becomes the order's most important American center.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1967</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">The Word of God community founded</a></h3>
+          <p>Ralph Martin, Stephen Clark, Jim Cavnar and Gerry Rauch found the Word of God — matrix of the 'covenant communities'.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1967</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">The Duquesne Weekend</a></h3>
+          <p>About 25 students of Duquesne University's Chi Rho group, on retreat at The Ark and the Dove, report experiences of baptism in the Holy Spirit — the founding moment of the Catholic Charismatic Renewal. Some popular accounts say 17–18 February; 17–19 is the solid dating.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1967</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">The movement reaches Notre Dame</a></h3>
+          <p>Two weeks after Duquesne, nine people — among them Kevin and Dorothy Ranaghan — pray for baptism in the Spirit at the University of Notre Dame; the first 'international' gathering follows there on 7–9 April, seed of the annual Notre Dame conferences that would draw tens of thousands in the 1970s.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1967</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Populorum Progressio</a></h3>
+          <p>Paul VI's encyclical on 'the development of peoples', a key reference for the movement.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1968</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Gutiérrez's Chimbote lecture</a></h3>
+          <p>Asked to speak on a 'theology of development', Gustavo Gutiérrez reframes the topic as 'Hacia una teología de la liberación'.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1968</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The petition to Paul VI</a></h3>
+          <p>The 'Message to Paul VI' against 'communist infiltration' in the Church gathers 1,600,368 signatures in Brazil (2,025,201 with the Southern Cone TFPs) — the movement's own numbers, always attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1968</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CELAM II (Medellín)</a></h3>
+          <p>Paul VI opens the conference in Bogotá on 24 August (first papal visit to Latin America); working sessions in Medellín 26 August – 6 September adopt the language of 'institutionalized violence' and the option for the poor.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1968</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">II General Conference (Medellín)</a></h3>
+          <p>Paul VI opens the conference in Bogotá cathedral — the first papal visit to Latin America; the working sessions sit in Medellín, producing the Medellín Documents. The interpretation disputes belong to the tl project.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1969</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Rubem Alves, 'A Theology of Human Hope'</a></h3>
+          <p>The Brazilian Presbyterian's 1968 Princeton dissertation 'Towards a Theology of Liberation' is published (retitled by the publisher) — the Protestant pioneer text.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1969</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">'Maryamiyya' enters the name</a></h3>
+          <p>The order formally becomes the Tariqa Shadhiliyya-Darqawiyya-Alawiyya-Maryamiyya.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1969 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Arrival in Brazil (movement's account)</a></h3>
+          <p>US Jesuit Fr. Haroldo Rahm begins 'Prayer Courses and Studies on the Holy Spirit' in Campinas in the second half of 1969 — RCC Brasil cites a 15–17 August 1969 experience with about 60 young people — and Brazil's first prayer group is born. The academic literature (Prandi) dates the movement's Brazilian take-off to the mid-1970s; both datings are recorded.</p>
+        </div>
+      </article>
+      <h2 class="decade">1970s</h2>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1970</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Sigaud breaks with the TFP</a></h3>
+          <p>Archbishop Sigaud breaks with Plinio and the movement, supporting the Médici government's agrarian program and diverging on liturgical-ecclesial questions.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1970</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Founding of the SSPX</a></h3>
+          <p>Bishop François Charrière erects the Society as a pia unio on an ad experimentum basis for six years; Marcel Lefebvre is founder and superior.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1971</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Écône seminary opens</a></h3>
+          <p>The International Seminary of Saint Pius X receives its first cohort of 24 candidates; 32 more enter in October 1972.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1971</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Gutiérrez publishes 'Teología de la liberación'</a></h3>
+          <p>The movement's foundational text; English translation 'A Theology of Liberation' follows in 1973 (Orbis).</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1971</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Casaldáliga becomes bishop</a></h3>
+          <p>Pedro Casaldáliga begins his emblematic 'church of the poor' prelature in the Brazilian Amazon (served 1971–2005).</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1972 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">López Trujillo elected CELAM secretary-general</a></h3>
+          <p>Alfonso López Trujillo begins the institutional pushback against liberation theology from within CELAM.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1972 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">National diffusion begins</a></h3>
+          <p>Rahm publishes 'Sereis Batizados no Espírito', presenting 'Catholic Pentecostalism'; Fr. Eduardo Dougherty SJ, ordained 1971, returns to Brazil and spreads retreats and prayer groups across the country (movement's account).</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1972</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Christians for Socialism encounter</a></h3>
+          <p>First Latin American Encounter of Cristianos por el Socialismo (~400 delegates); the movement had begun in April 1971 when some 80 Chilean priests declared support for socialism.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1972</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">The Sucre Assembly</a></h3>
+          <p>The XIV Ordinary Assembly restructures the departments, self-defines CELAM as an 'organism of communion and service', and elects Alfonso López Trujillo secretary general (to 1979) — widely read by scholars as an institutional turning point; that reading is attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1973 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The international network</a></h3>
+          <p>Sister TFPs form in Argentina, Chile and Uruguay (1967), then Spain (1971), the United States (incorporated 18 May 1973 as the Foundation for a Christian Civilization — PT Wikipedia says 1974; the divergence is recorded), Canada (1975), France (1977), Germany (1982) and beyond.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1973 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">First National Congress of the RCC</a></h3>
+          <p>About 50 leaders meet, organized by Dougherty, Rahm and Sr. Juliette Schuckenbrock; a second congress follows in Belo Horizonte in 1974 (movement's account).</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1973 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Chilean bishops ban Christians for Socialism</a></h3>
+          <p>After the Pinochet coup, the Chilean episcopate forbids clergy membership in the movement.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1974</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Huston Smith joins</a></h3>
+          <p>The scholar of world religions joins the order after meeting Schuon, attending his first dhikr in Tehran — with Nasr, one of the two most famous academic followers per Sedgwick.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1974</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">ITEPAL opens</a></h3>
+          <p>The four regional formation institutes — including IPLA (Quito), absorbed per the Sucre restructuring — are merged into ITEPAL, which moves to Bogotá in 1989.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1974</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">The first Malines Document</a></h3>
+          <p>Cardinal Léon-Joseph Suenens convenes theologians (drafting by Kilian McDonnell) and publishes 'Malines Document 1' — the theological-pastoral orientations that gave the movement doctrinal respectability.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1974</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Canonical visitation</a></h3>
+          <p>Two Belgian priests inspect the seminary on behalf of a commission of cardinals.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1974 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Lefebvre's Declaration</a></h3>
+          <p>Lefebvre professes adherence to 'eternal Rome' while rejecting 'the Rome of neo-modernist tendencies' — the text that became the Society's ideological charter.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1975 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Logic and Transcendence'</a></h3>
+          <p>Schuon's fullest engagement with modern philosophy (French 1970, English 1975); French first-edition year flagged pending the standard bibliography.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1975</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Approval withdrawn</a></h3>
+          <p>Bishop Pierre Mamie withdraws the Society's pia unio status with the approval of the Congregation for Religious and Paul VI; the SSPX disputes the legality of the procedure.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1975</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Paul VI: 'a chance for the Church'</a></h3>
+          <p>At the movement's third international congress in the Holy Year — with a Pentecost Mass in St Peter's on 18 May — Paul VI calls the Renewal 'a chance for the Church and for the world'.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1976</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">The 'hot summer' ordinations</a></h3>
+          <p>Lefebvre ordains priests despite an explicit prohibition, after being publicly rebuked by Paul VI in consistory on 24 May.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1976</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Suspension a divinis</a></h3>
+          <p>After a 1 July suspension from conferring orders and continued refusal to comply, Lefebvre is suspended from all sacramental ministry.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1978</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Canção Nova founded</a></h3>
+          <p>Fr. (later Msgr.) Jonas Abib founds the Canção Nova community — the future media powerhouse of the Brazilian Renewal.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1978 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Lefebvre meets John Paul II</a></h3>
+          <p>Shortly after the papal election, Lefebvre seeks regularization; talks continue intermittently through the 1980s.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1979</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CELAM III (Puebla)</a></h3>
+          <p>John Paul II's opening address (28 January) warns against 're-readings' of Christ as political revolutionary while affirming the defense of human dignity; the conference document consolidates the 'preferential option for the poor'.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1979</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">III General Conference (Puebla)</a></h3>
+          <p>Opened by John Paul II on 28 January; concluding document on evangelization in Latin America's present and future.</p>
+        </div>
+      </article>
+      <h2 class="decade">1980s</h2>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1980</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Latin American seminary founded</a></h3>
+          <p>The Seminario Nuestra Señora Corredentora is founded in the Buenos Aires priory and moves to La Reja in 1981 — the formation house for Latin America, including Brazil.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1980</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Schuon moves to Bloomington</a></h3>
+          <p>Schuon and his wife emigrate from Lausanne to Bloomington, where a large community of disciples already lived; the publishing house World Wisdom is founded there the same year.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1980</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Temenos' launches</a></h3>
+          <p>Kathleen Raine, Keith Critchlow, Brian Keeble and Philip Sherrard found the review devoted to 'the arts of the imagination' — seed of the Temenos Academy (1990), of which the Prince of Wales (now King Charles III) has been patron since its founding.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1980</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Associação do Senhor Jesus</a></h3>
+          <p>Fr. Eduardo Dougherty founds the Associação do Senhor Jesus: publications, music and the TV program 'Anunciamos o Senhor'. The same year Raniero Cantalamessa OFMCap, a preacher close to the Renewal, becomes Preacher of the Papal Household (year per CHARIS's biography of him).</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1980</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Assassination of Óscar Romero</a></h3>
+          <p>The Archbishop of San Salvador is shot dead while celebrating Mass in the Divina Providencia hospital chapel.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1981</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Nasr's Gifford Lectures</a></h3>
+          <p>Seyyed Hossein Nasr delivers the Gifford Lectures, published as 'Knowledge and the Sacred' — per the Gifford records, the first Muslim and first non-Westerner to do so: the school's academic high-water mark.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1981</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">John Paul II receives the leaders' conference</a></h3>
+          <p>The pope addresses the fourth international leaders' conference of the Renewal — the first of his repeated receptions.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1982</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Schmidberger succeeds Lefebvre</a></h3>
+          <p>Fr. Franz Schmidberger becomes Superior General (1982–1994); Lefebvre remains the Society's episcopal head.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1982</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Comunidade Católica Shalom founded</a></h3>
+          <p>Moysés Louro de Azevedo Filho opens the 'evangelizing snack bar' in Fortaleza, with Cardinal Lorscheider present — birth of the Shalom community.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1982</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Sword of the Spirit federation</a></h3>
+          <p>A federation of covenant communities grows out of the Word of God (unified association 1982, international entity 1983; 82 communities, 45 Catholic, by 2017). The Word of God itself withdrew in 1990 amid documented controversies over authoritarian governance — an episode critics of covenant communities cite.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1983</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">The 'Nine' leave — SSPV founded</a></h3>
+          <p>Fr. Clarence Kelly and eight US priests are expelled from or leave the SSPX in a dispute over the 1962 Missal and openness to sedevacantism, founding the Society of Saint Pius V — a distinct, sedevacantist-leaning body.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1983</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Lings's 'Muhammad'</a></h3>
+          <p>Martin Lings's prize-winning biography becomes the school's biggest crossover into mainstream Islamic readership.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1983 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">John Paul II reprimands Ernesto Cardenal</a></h3>
+          <p>The pope publicly admonishes the priest-poet, then Sandinista culture minister, on the Managua airport tarmac — the famous wagging-finger image.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1984</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Cardenal suspended a divinis</a></h3>
+          <p>Ernesto Cardenal is suspended from priestly ministry under John Paul II for holding government office.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1984</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Nasr's Washington platform</a></h3>
+          <p>Seyyed Hossein Nasr becomes University Professor of Islamic Studies at George Washington University and founds the Foundation for Traditional Studies, publisher of the journal Sophia.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1984</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The Venezuelan crisis</a></h3>
+          <p>A press campaign and parliamentary inquiry target the 'Resistencia-TFP', with a member arrested on suspicion of a plot against John Paul II and accusations of being a 'sect'; the accusations never produced a conviction in the sources consulted, the Venezuelan TFP was effectively extinguished by around 1986, and every characterization here is attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1984</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CDF Instruction 'Libertatis Nuntius'</a></h3>
+          <p>The Instruction on Certain Aspects of the 'Theology of Liberation', signed by Cardinal Joseph Ratzinger, warns against the uncritical borrowing of Marxist analysis while not condemning the theme of liberation itself.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1985</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Notification on Leonardo Boff</a></h3>
+          <p>The CDF issues a Notification on Boff's 'Church: Charism and Power'; Boff is subsequently subjected to a period of imposed silence, lifted in 1986.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1985</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The CNBB note</a></h3>
+          <p>A CNBB commission (Bishops Gilberto Pereira Lopes, Antonio Misiara, Carlos Alberto Navarro) declares 'notorious the lack of communion of the TFP with the Church in Brazil', citing 'esoteric character, religious fanaticism, cult of the leader's personality and abusive use of the name of Mary', and exhorts Catholics not to join. The full text circulates mainly via the TFP's own replies — the CNBB original is a documented gap.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1986 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">The Brazilian branch founded</a></h3>
+          <p>Olavo de Carvalho leads a group of Brazilians to Bloomington, is initiated (taking the name Sidi Muhammad Ibrahim, per the critical documentary blog, corroborated in outline by Sedgwick), and is appointed muqaddam in Brazil under Martin Lings's guidance — described as the first tariqa brought to Brazil by Brazilians. Sources split between 1986 (Sedgwick) and 1987 (Brazilian tertiary sources) for the founding.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1986</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CDF Instruction 'Libertatis Conscientia'</a></h3>
+          <p>The Instruction on Christian Freedom and Liberation gives a more positive treatment of liberation themes.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1986 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">John Paul II's letter to the Brazilian bishops</a></h3>
+          <p>The pope writes that liberation theology, rightly understood, is 'not only opportune but useful and necessary' — a passage cited by the movement's defenders.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1987</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Consecrations announced</a></h3>
+          <p>Lefebvre announces his intention to consecrate bishops without a papal mandate, citing his age and the need to continue ordinations.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Protocol signed — and withdrawn</a></h3>
+          <p>Lefebvre and Cardinal Ratzinger sign a protocol of agreement; Lefebvre withdraws his assent the following day.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">The Écône consecrations</a></h3>
+          <p>Lefebvre, with Bishop Antônio de Castro Mayer (emeritus of Campos, Brazil) as co-consecrator, consecrates Bernard Fellay, Bernard Tissier de Mallerais, Richard Williamson and Alfonso de Galarreta without papal mandate.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Castro Mayer at Écône — without the TFP</a></h3>
+          <p>Castro Mayer co-consecrates Lefebvre's four bishops and incurs the declared excommunication (Ecclesia Dei). The TFP did not accompany him and remained formally in communion — the key TFP ≠ SSPX distinction; Castro Mayer's Campos succession is documented in the fsspx project.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Excommunications declared</a></h3>
+          <p>The Congregation for Bishops declares that Lefebvre, Castro Mayer and the four new bishops incurred latae sententiae excommunication.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">'Ecclesia Dei'</a></h3>
+          <p>John Paul II's motu proprio calls the consecrations 'a schismatic act' and establishes the Ecclesia Dei Commission for faithful attached to the traditional liturgy.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">FSSP founded</a></h3>
+          <p>Twelve former SSPX priests led by Fr. Josef Bisig found the Priestly Fraternity of Saint Peter in full communion with Rome.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1988</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Campos priests form the Priestly Union of Saint John Mary Vianney</a></h3>
+          <p>The priests loyal to Bishop Castro Mayer formally organize the União Sacerdotal São João Maria Vianney, continuing the traditional Mass across the diocese of Campos.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1989 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Olavo breaks with Schuon</a></h3>
+          <p>Olavo de Carvalho leaves the order after a rupture with Schuon; the sources disagree on the date — 1987 (Bunker da Cultura), 'the late 1980s' (Sedgwick), or an expelled-1987–91 window (the Jardim series) — and on the reasons, with his own published framing (the multiconfessional rule, in 'Influências discretas') differing from the hostile accounts; every version is attributed. He reinvents himself, in Sedgwick's phrase, as a Catholic-identifying 'post-Traditionalist'.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1989</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">UCA massacre</a></h3>
+          <p>A Salvadoran army unit murders six Jesuits — including rector and philosopher Ignacio Ellacuría — and Elba and Celina Ramos at the Central American University.</p>
+        </div>
+      </article>
+      <h2 class="decade">1990s</h2>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1990</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1990.html">I Encontro — São Paulo, Brazil</a></h3>
+          <p>Founding meeting. 48 parties/organizations from 14 countries.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1990</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">TV Século 21 and Obra de Maria</a></h3>
+          <p>Dougherty's association launches the satellite channel TV Século 21 (today Rede Século 21); in Recife, Gilberto Gomes Barbosa founds the Obra de Maria community, focused on pilgrimages and missions.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1991</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1991.html">II Encontro — Mexico City, Mexico</a></h3>
+          <p>Name 'Foro de São Paulo' adopted from this meeting.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1991</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Death of Marcel Lefebvre</a></h3>
+          <p>The founder dies at 85 and is buried at the Écône seminary.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1991</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Death of Antônio de Castro Mayer</a></h3>
+          <p>The co-consecrator of the 1988 Écône consecrations dies a month after Lefebvre.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1991</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Rangel consecrated for the Campos union</a></h3>
+          <p>Licínio Rangel is consecrated without papal mandate by Bishop Tissier de Mallerais, assisted by de Galarreta and Williamson, to lead the Campos priests after Castro Mayer's death.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1991</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">The Bloomington affair — indictment and dismissal</a></h3>
+          <p>A grand jury indicts Schuon, 84, on allegations by a former member concerning ritual gatherings; the judge criticizes the indictment as vague, and on 20 November the county prosecutor dismisses all charges, stating there was insufficient evidence — 'not one shred of evidence' beyond the complainant's allegations, per the wording quoted by Wikipedia — adding that a miscarriage had occurred insofar as Schuon had been labeled. Schuon was never tried and the case was never revived. Accounts of the deputy prosecutor's subsequent departure differ (resigned vs dismissed) and both are attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1992</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1992.html">III Encontro — Managua, Nicaragua</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1992</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Schuon retires</a></h3>
+          <p>Aged 85, Schuon resigns the direction of the order — per Wikipedia, without naming a successor, establishing instead independent zawiyas led by individual khalifas.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1992 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Leonardo Boff leaves the priesthood</a></h3>
+          <p>Facing a second silencing order, Boff leaves the Franciscan order and priestly ministry.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">1992</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CELAM IV (Santo Domingo)</a></h3>
+          <p>Held under strong Roman oversight; widely read by commentators as marginalizing liberationist currents — a characterization attributed to those commentators.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">1992</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">IV General Conference (Santo Domingo)</a></h3>
+          <p>Opened by John Paul II on the quincentenary of the evangelization; theme: New Evangelization, Human Promotion, Christian Culture.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">1992</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Études Traditionnelles' ends</a></h3>
+          <p>The school's flagship journal closes with the October–December 1992 issue, after a 1936–1992 run.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1993</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Pontifical recognition of ICCRS</a></h3>
+          <p>The Pontifical Council for the Laity approves the statutes of the movement's international office, renamed ICCRS (International Catholic Charismatic Renewal Services).</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1993</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1993.html">IV Encontro — Havana, Cuba</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">1994</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Fellay elected Superior General</a></h3>
+          <p>Bishop Bernard Fellay leads the Society 1994–2018 (re-elected 2006).</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1994 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">The Brazilian boom</a></h3>
+          <p>RCC Brasil itself estimated ~3.8 million participants in 1994 — a self-reported figure, attributed to the movement.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1994</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">CNBB Document 53</a></h3>
+          <p>The Brazilian bishops' conference unanimously approves 'Orientações Pastorais sobre a Renovação Carismática Católica' after a study begun at the April 1994 general assembly: it recognizes the movement's fruits while imposing cautions on Bible reading, liturgy, healing practices and the relation to the local Church — the episcopate's principal 'brakes' document.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1995</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The French parliamentary report</a></h3>
+          <p>Parliamentary report No. 2468 on sects lists the TFP and its associated Avenir de la Culture among 'mouvements sectaires' — a report whose methodology was itself widely contested; both the listing and the criticism of the report are recorded.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1995</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Death of Plinio Corrêa de Oliveira</a></h3>
+          <p>The founder dies at 86.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1995</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1995.html">V Encontro — Montevideo, Uruguay</a></h3>
+          <p>No meeting recorded for 1994.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1996</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1996.html">VI Encontro — San Salvador, El Salvador</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1997</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The succession dispute begins</a></h3>
+          <p>The majority wing led by João Scognamiglio Clá Dias sues over the statute reserving voting rights to the nine founding members; about 80% of the 1,800 members side with it.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1997</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1997.html">VII Encontro — Porto Alegre, Brazil</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">1998</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Death of Frithjof Schuon</a></h3>
+          <p>The order continues in autonomous branches, commonly identified with Seyyed Hossein Nasr (Washington) and Martin Lings (London) — a framing that coexists with the no-named-successor account.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">1998</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Padre Marcelo Rossi's record album</a></h3>
+          <p>'Músicas para Louvar ao Senhor', recorded at Masses of the young priest Marcelo Rossi and released by PolyGram, sells over 3.3 million copies — the best-selling album in Brazilian phonographic history — inaugurating the era of stadium Masses and charismatic mass media.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">1998</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/1998.html">VIII Encontro — Mexico City, Mexico</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">1999</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Heralds of the Gospel founded</a></h3>
+          <p>Clá Dias founds the Arautos do Evangelho, canonically erected at diocesan level the same year.</p>
+        </div>
+      </article>
+      <h2 class="decade">2000s</h2>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2000</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2000.html">IX Encontro — Managua, Nicaragua</a></h3>
+          <p>Some sources cite Niquinohomo, Nicaragua. No meeting recorded for 1999.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2000 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Jubilee pilgrimage to Rome</a></h3>
+          <p>Over 5,000 SSPX pilgrims visit the major basilicas; Cardinal Castrillón Hoyos opens contacts, reportedly offering a personal prelature or apostolic administration.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2001</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Pontifical approval of the Heralds</a></h3>
+          <p>John Paul II's Pontifical Council for the Laity recognizes the Heralds as an international private association of the faithful of pontifical right — the first such association approved by the Holy See in the third millennium (the precise formulation matters and is used here).</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2001</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2001.html">X Encontro — Havana, Cuba</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2002</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2002.html">XI Encontro — Antigua Guatemala, Guatemala</a></h3>
+          <p>Host country sometimes mis-cited as Antigua and Barbuda; the city is Antigua Guatemala, Guatemala.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2002 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Campos priests reconcile with Rome</a></h3>
+          <p>The priestly union founded by Castro Mayer's followers is received as the Personal Apostolic Administration Saint John Mary Vianney under Bishop Rangel; Fernando Rifan, consecrated in full communion later that year, succeeds him in December — a path the SSPX declined.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2003 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2003.html">— Encontro — Quito, Ecuador</a></h3>
+          <p>Quito 2003 is not part of the Forum’s official numbered sequence: the official declarations book numbers Antigua 2002 as XI and São Paulo 2005 as XII, with no numbered encuentro for 2003. No final declaration is recorded for this meeting.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2004</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The courts award the TFP name</a></h3>
+          <p>São Paulo courts give the entity, the TFP name and the patrimony to the wing linked to the Heralds; the founders' wing creates the Associação dos Fundadores (2004), later barred from using the TFP acronym; the STJ confirms non-founder voting rights, with a final appeal reaching the STF in 2013.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2004</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Against the Modern World'</a></h3>
+          <p>Mark Sedgwick publishes the first full history of the movement — the academic backbone of this site.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">2005</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Death of Martin Lings</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2005</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2005.html">XII Encontro — São Paulo, Brazil</a></h3>
+          <p>No meeting recorded for 2004.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">2006</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Death of Rama Coomaraswamy</a></h3>
+          <p>The perennialist author, cardiac surgeon, sometime SSPX seminary professor and sedevacantist priest dies at 76 — the single most documented bridge between this order's world and Catholic traditionalism.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2006</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Pew: a 'pentecostalized' Brazil</a></h3>
+          <p>The Pew Forum's 'Spirit and Power' survey finds 'renewalists' comprising roughly half of Brazil's population, and more than half of Brazilian Catholics adopting charismatic elements (divine healing, tongues, expressive worship) — the analysts' framing of a 'pentecostalization' of Brazilian Catholicism is theirs, not the movement's.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2006</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">IPCO founded</a></h3>
+          <p>Adolpho Lindenberg and disciples of the founders' wing create the Instituto Plinio Corrêa de Oliveira — self-described heir of the original TFP line, at the historic headquarters.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2007</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2007.html">XIII Encontro — San Salvador, El Salvador</a></h3>
+          <p>No meeting recorded for 2006.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2007</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Notification on Jon Sobrino</a></h3>
+          <p>The CDF Notification on Sobrino's christology books (dated 26 November 2006, published March 2007) finds 'erroneous or dangerous propositions' but imposes no formal silencing.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2007</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">CELAM V (Aparecida)</a></h3>
+          <p>Opened by Benedict XVI; Cardinal Jorge Bergoglio chairs the final-document drafting committee — Aparecida is later described by commentators as the matrix of his pontificate.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2007</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">V General Conference (Aparecida)</a></h3>
+          <p>Opened by Benedict XVI; the Aparecida Document — its redaction committee chaired by Cardinal Jorge Mario Bergoglio — becomes the reference text for 'missionary discipleship'.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2007</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">'Summorum Pontificum'</a></h3>
+          <p>Benedict XVI liberalizes the 1962 Missal as the 'extraordinary form', meeting one of the SSPX's two stated preconditions for talks.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2008</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Canção Nova recognized by the Holy See</a></h3>
+          <p>The Pontifical Council for the Laity recognizes Canção Nova as an international private association of the faithful (decree ad experimentum; definitive recognition later — the dates are distinct).</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2008</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2008.html">XIV Encontro — Montevideo, Uruguay</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2009</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2009.html">XV Encontro — Mexico City, Mexico</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2009</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The Heralds' clerical societies</a></h3>
+          <p>The Heralds' societies Virgo Flos Carmeli (men) and Regina Virginum (women) are raised by Benedict XVI to societies of apostolic life; Clá Dias is ordained priest and made monsignor.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2009</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Dugin's 'Fourth Political Theory'</a></h3>
+          <p>Aleksandr Dugin's post-liberal ideology (English translation 2012) draws explicitly on Traditionalism, making him the key conduit of its vocabulary into Russian geopolitics — an Evolian-line reception, attributed as such.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2009</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Williamson affair</a></h3>
+          <p>A television interview in which Bishop Richard Williamson denied the Holocaust airs just before the remission is announced, causing worldwide controversy; the SSPX removes him as rector of the La Reja seminary.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2009</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">1988 excommunications remitted</a></h3>
+          <p>A decree of the Congregation for Bishops (dated 21 January, published 24 January) lifts the excommunications of the four bishops; some sources cite 10 March 2009, the date of Benedict XVI's explanatory letter.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2009 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Doctrinal talks begin</a></h3>
+          <p>Discussions between the CDF and the SSPX on Vatican II (religious liberty, ecumenism, collegiality) run until 2012 without producing an agreement.</p>
+        </div>
+      </article>
+      <h2 class="decade">2010s</h2>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2010</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2010.html">XVI Encontro — Buenos Aires, Argentina</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2010</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'Harmony' and the royal reception</a></h3>
+          <p>The Prince of Wales publishes 'Harmony: A New Way of Looking at Our World'; commentators — Sedgwick, Commonweal — read Traditionalist and Nasrian influence in it, though the book cites no Traditionalist sources. Reported strictly as attributed reception, never as affiliation.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2011</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2011.html">XVII Encontro — Managua, Nicaragua</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2012</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Hanegraaff's 'Esotericism and the Academy'</a></h3>
+          <p>Wouter Hanegraaff's study treats Traditionalism critically as 'religionism' within the academic history of Western esotericism.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2012</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Shalom's definitive pontifical recognition</a></h3>
+          <p>The Shalom community receives definitive pontifical recognition.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2012</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Williamson expelled</a></h3>
+          <p>The SSPX expels Bishop Williamson after unauthorized confirmations in Brazil and public defiance; he goes on to lead the loose 'Resistance' network.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2012</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2012.html">XVIII Encontro — Caracas, Venezuela</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2013</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Election of Pope Francis</a></h3>
+          <p>Jorge Bergoglio becomes the first Latin American pope.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2013</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Francis receives Gutiérrez</a></h3>
+          <p>Francis meets privately with Gustavo Gutiérrez, brought by CDF prefect Gerhard Müller, Gutiérrez's friend and co-author — widely read as a rehabilitation-adjacent gesture, a reading attributed to commentators.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2013</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2013.html">XIX Encontro — São Paulo, Brazil</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2014 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">The RCC and Brazilian politics (analysts' account)</a></h3>
+          <p>Social scientists (Carranza and others) describe the RCC's 'Ministério Fé e Política' backing charismatic candidates — e.g. federal deputy Diego Garcia (elected 2014, 2018) — as a response to Pentecostal political growth; the studies also record heterogeneous and internally contested engagement. The framing is the researchers', attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2014 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">ITEPAL becomes CEBITEPAL</a></h3>
+          <p>The formation center is reorganized as the Centro Bíblico Teológico Pastoral para América Latina y el Caribe.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2014</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2014.html">XX Encontro — La Paz, Bolivia</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2015 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Resistance consecration in Brazil</a></h3>
+          <p>Williamson consecrates Jean-Michel Faure without mandate at the Santa Cruz Monastery, incurring a new automatic excommunication and consolidating the 'Resistance' splinter.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2015</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Romero beatified</a></h3>
+          <p>Óscar Romero is declared a martyr (February 2015) and beatified.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2015 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Confession faculties for the Jubilee</a></h3>
+          <p>Pope Francis grants that the faithful can validly and licitly receive absolution from SSPX priests during the Year of Mercy.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2015</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2015.html">XXI Encontro — Mexico City, Mexico</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2016</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Second Resistance consecration in Brazil</a></h3>
+          <p>Williamson consecrates Tomás de Aquino Ferreira da Costa, prior of the Santa Cruz Monastery, without mandate.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2016</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Faculties extended indefinitely</a></h3>
+          <p>In 'Misericordia et misera' §12 Francis extends the SSPX confession faculty 'until further provisions are made'.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2016</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2016.html">XXII Encontro — San Salvador, El Salvador</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2017</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2017.html">XXIII Encontro — Managua, Nicaragua</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2017</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">The Bannon–Evola episode</a></h3>
+          <p>After Steve Bannon's 2014 Vatican-conference remarks referencing Dugin and 'what's called the traditionalist movement', the New York Times' 'Steve Bannon Cited Italian Thinker Who Inspired Fascists' makes Evola and Traditionalism briefly front-page news, amid the alt-right republication of Evola.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2017 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Casa Autônoma do Brasil</a></h3>
+          <p>Brazil is erected as an Autonomous House ('district in formation') of the SSPX, separated from the Argentina-based District of South America for linguistic and cultural reasons.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2017</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Marriage provisions</a></h3>
+          <p>An Ecclesia Dei Commission letter (signed Cardinal Müller) allows local ordinaries to grant faculties so that marriages in the SSPX milieu are celebrated validly.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2017</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Zendejas consecrated for the Resistance</a></h3>
+          <p>Williamson, assisted by Faure and Tomás de Aquino, consecrates Gerardo Zendejas; the local bishop's statement notes the excommunication incurred.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2017</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Golden Jubilee with Francis</a></h3>
+          <p>An ecumenical Pentecost vigil with Pope Francis at the Circus Maximus gathers ~50,000 charismatics and Pentecostals from over 125 countries, with preaching by Cantalamessa and pastor Giovanni Traettino.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2017</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Apostolic visitation of the Heralds</a></h3>
+          <p>The Vatican's congregation for consecrated life opens a visitation citing 'deficiencies in the style of government, formation, administration and fundraising', amid circulating videos of exorcism practices and statements about 'Dr. Plinio'; Clá Dias resigns the generalate on 12 June 2017.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2018</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2018.html">XXIV Encontro — Havana, Cuba</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2018</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Pagliarani elected Superior General</a></h3>
+          <p>The General Chapter elects Fr. Davide Pagliarani, former rector of La Reja, to a 12-year term, succeeding Bishop Fellay.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2018</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Romero canonized</a></h3>
+          <p>Francis canonizes Óscar Romero.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">CHARIS replaces ICCRS</a></h3>
+          <p>The Dicastery for Laity, Family and Life institutes CHARIS (Catholic Charismatic Renewal International Service) at Francis's express wish; its statutes take effect at Pentecost 2019, when ICCRS and the Catholic Fraternity cease activities. The Vatican insists it is a new service, not a fusion. Francis receives the leaders on 8 June 2019.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Cardenal's suspension lifted</a></h3>
+          <p>Francis grants Ernesto Cardenal 'absolution from all canonical censures', ending the 1984 suspension.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Olavo honored with Bannon and Bolsonaro</a></h3>
+          <p>Olavo de Carvalho is honored at a dinner with Steve Bannon and President Jair Bolsonaro — the moment the Brazilian ex-Maryami's political influence becomes an international story; Sedgwick calls him Brazil's most prominent post-Traditionalist.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">The renovation begins</a></h3>
+          <p>The 37th Ordinary General Assembly launches the process of 'renovación y reestructuración' and elects Miguel Cabrejos Vidarte president (2019–2023).</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">I Encuentro — founding</a></h3>
+          <p>Over 30 leaders from about 12 countries meet at the 'Encuentro Latinoamericano ProgresivaMente', driven by Marco Enríquez-Ominami with Alberto Fernández, Ernesto Samper and Aloizio Mercadante; the Declaración de Puebla (14 July) constitutes the group, with founding statements on progressive dialogue, 'lawfare' and Venezuela. López Obrador never joined: Morena was represented by its president Yeidckol Polevnsky — the 'AMLO patronage' framing belongs to critical outlets and is attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Commissioner rejected by the Heralds' leadership</a></h3>
+          <p>Francis names Cardinal Raymundo Damasceno Assis pontifical commissioner of the Heralds; the association's leadership under president Felipe Eugenio Lecaros Concha publicly declares the commissariat invalid — open conflict with the Vatican, alongside press accusations of physical, psychological and financial abuse (CartaCapital, NCR), which are attributed accusations.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">II Encuentro — 'El cambio es el progresismo'</a></h3>
+          <p>32 leaders from 12 countries, hosted by president-elect Alberto Fernández; opened with a video message from Lula, freed from prison on 8 November: 'Estoy libre y con muchas ganas de pelear'.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">Bolivia: the 'golpe' statement</a></h3>
+          <p>From Buenos Aires the group declares Evo Morales's ouster 'un golpe de estado', demands the interim government return power, and condemns 'arbitrary persecution of progressive leaders'.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2019</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2019.html">XXV Encontro — Caracas, Venezuela</a></h3>
+          <p>Last meeting before a multi-year pause (no in-person meetings 2020–2022).</p>
+        </div>
+      </article>
+      <h2 class="decade">2020s</h2>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2020</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">'War for Eternity'</a></h3>
+          <p>Benjamin Teitelbaum's ethnographic account links Bannon, Dugin and Olavo de Carvalho through Traditionalism, based on extensive Bannon interviews; reviewers dispute how coherent or consequential the 'network' really is — the book's stronger claims are the author's, not consensus.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2020</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">CLAJUD launched</a></h3>
+          <p>The Consejo Latinoamericano de Justicia y Democracia — agreed at the founding meeting per the official site — is publicly launched under ex-judge Baltasar Garzón to study 'lawfare' and human-rights cases; members include Carol Proner and Adoración Guamán, with E. Raúl Zaffaroni contributing to its publications.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2020</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Death of Ernesto Cardenal</a></h3>
+          <p>The priest-poet of Solentiname dies at 95.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2020 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">The pandemic encuentros (III–VI)</a></h3>
+          <p>Four virtual encuentros with 30–60 leaders (per ES Wikipedia): 'Puebla–Chile' with the declaration 'En tiempos de pandemia, unidad en las propuestas', 'Puebla–Colombia', and the first-anniversary encuentro of July 2020.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2020 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Death of Pedro Casaldáliga</a></h3>
+          <p>The Claretian bishop-prelate emeritus of São Félix do Araguaia, poet and indigenous-rights defender, dies.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The Heralds' schools ordered closed</a></h3>
+          <p>The Vatican determines the closure of the Heralds' boarding schools, citing excessively rigid discipline and isolation from families — per NCR's reporting of the Vatican decision.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2021 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">The Manifiesto Progresista</a></h3>
+          <p>A 33-point manifesto proposes a 'modelo solidario de desarrollo' as the alternative to neoliberalism; presentation dated 11 February by Cubadebate/teleSUR and 18 February by others — the divergence is recorded against the official PDF.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">New pastoral structure approved</a></h3>
+          <p>The 38th Ordinary Assembly replaces the old departments with four centers: CEPRAP, CEBITEPAL, the Knowledge Management Center (with its socio-pastoral observatory) and communications.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">'Traditionis Custodes'</a></h3>
+          <p>Francis restricts the 1962 Missal in the mainstream Church. Canonically the motu proprio does not bind the SSPX; press analyses reporting increased attendance at SSPX chapels afterwards are attributed to those analyses.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Extraordinary Assembly</a></h3>
+          <p>Approves the administrative-financial structure and new statutes, submitted to the Holy See.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">First Ecclesial Assembly of Latin America</a></h3>
+          <p>CELAM convenes bishops together with laity (over 1,000 participants), presented as being in continuity with Aparecida.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">First Ecclesial Assembly</a></h3>
+          <p>Bishops, priests, religious and laity meet together for the first such assembly in the region, convoked by CELAM with Francis's encouragement.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">VII Encuentro</a></h3>
+          <p>About 200 leaders from 19 countries; members publicly endorse Gabriel Boric ahead of Chile's 19 December runoff.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2021</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">The Assange letter</a></h3>
+          <p>The group and CLAJUD — with signatures including Lula, Dilma Rousseff, Samper and Lugo — demand Julian Assange's freedom after the Westminster extradition ruling; later statements after his 2024 release credited Correa's asylum decision.</p>
+        </div>
+      </article>
+      <article class="ev ev-tariqa" data-project="tariqa">
+        <div class="ev-year">2022</div>
+        <div class="ev-body">
+          <span class="ev-project">Tariqa Maryamiyya</span>
+          <h3><a href="https://cronologia.github.io/tariqa/#chronology">Death of Olavo de Carvalho</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2022</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Francis approves the new statutes</a></h3>
+          <p>The restructuring is canonically sealed.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2022</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">VIII Encuentro</a></h3>
+          <p>About 150 leaders from 18 countries meet in newly Petro-governed Colombia; President Boric — not a member — sends a video greeting: 'Nos necesitamos más unidos que nunca'.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2022</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Death of Msgr. Jonas Abib</a></h3>
+          <p>Canção Nova's founder dies at 85.</p>
+        </div>
+      </article>
+      <article class="ev ev-perennialism" data-project="perennialism">
+        <div class="ev-year">2023</div>
+        <div class="ev-body">
+          <span class="ev-project">Perennialism</span>
+          <h3><a href="https://cronologia.github.io/perennialism/#chronology">Sedgwick's 'Traditionalism'</a></h3>
+          <p>The analytic synthesis of the philosophy of Guénon, Evola and Schuon and its applications — the school historicized by the scholar who mapped it.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2023</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Spengler elected president</a></h3>
+          <p>The 39th Ordinary Assembly elects Jaime Spengler OFM (Porto Alegre) president for 2023–2027, with Lizardo Estrada Herrera OSA as secretary general.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2023 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">IX Encuentro</a></h3>
+          <p>About 200 leaders from ~21 countries return to Puebla — in person Samper, Evo Morales, Correa, Zelaya, Leonel Fernández and Zapatero; virtually Lula, Mujica, Dilma and Alberto Fernández. The declaration warns of 'una derecha antidemocrática... con ideología fascista'. Dates diverge: 30 Sep–1 Oct (official/SELA) vs 1–3 Oct (ES Wikipedia) — recorded.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2023</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">The Milei era opens</a></h3>
+          <p>After Javier Milei takes office the group calls his mega-decree 'un atropello al sistema republicano'; Milei's allies (Fundación Disenso) had cast him as 'the alternative to the Grupo de Puebla and the Foro de São Paulo' — a useful specimen of how right-wing discourse conflates the two organizations.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2023</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2023.html">XXVI Encontro — Brasília, Brazil</a></h3>
+          <p>First in-person meeting after the pandemic-era pause; held in Lula's third term.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Death of Fr. Haroldo Rahm</a></h3>
+          <p>The pioneer of the Brazilian Renewal — and founder of the Fazenda do Senhor Jesus addiction-recovery work — dies in Campinas.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">'Ocúpese de lo importante'</a></h3>
+          <p>After Milei mocks the group, it replies with the statement 'Ocúpese de lo importante'.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">The Zúñiga coup attempt</a></h3>
+          <p>The group repudiates the attempted coup in Bolivia; the Bolivian government's pushback to the statement is reported — single-source, flagged.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">X Encuentro — and the coexistence proof</a></h3>
+          <p>Hosted by President Xiomara Castro on the 15th anniversary of the 2009 coup against Zelaya; declaration 'Renovar el progresismo para relanzar la esperanza' and a call for a 'plan de acción para frenar el neofascismo'. Crucially for disambiguation: the Foro de São Paulo, the Grupo de Puebla, the Progressive International and CELAC Social all met the same week in Tegucigalpa as separate organizations.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">Five-year self-assessment</a></h3>
+          <p>The group publishes its anniversary balance '5 años impulsando el cambio en Iberoamérica'.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">The Venezuela election controversy</a></h3>
+          <p>The group's statement on the 28 July 2024 election — 'monitoring the process, no external interference' — draws criticism including from within its own orbit; Emol titles it 'El complicado momento del Grupo de Puebla'.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">Alberto Fernández suspended</a></h3>
+          <p>The co-founder's participation is suspended ('at his request') after Fabiola Yáñez's gender-violence complaint (filed 6 August 2024); right-leaning outlets criticize the group for not expelling him outright — attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">Defense of Evo Morales</a></h3>
+          <p>Statements of concern over a 'lawfare campaign' against Morales (4 October) and rejection of the alleged assassination attempt against him (27 October).</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Death of Tissier de Mallerais</a></h3>
+          <p>Bishop Bernard Tissier de Mallerais, one of the four 1988 bishops and Lefebvre's biographer, dies; he is buried at Écône.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Death of Gustavo Gutiérrez</a></h3>
+          <p>The 'father of liberation theology' dies at 96 in the Dominican convent in Lima.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsp" data-project="fsp">
+        <div class="ev-year">2024</div>
+        <div class="ev-body">
+          <span class="ev-project">Foro de São Paulo</span>
+          <h3><a href="https://cronologia.github.io/fsp/meetings/2024.html">XXVII Encontro — Tegucigalpa, Honduras</a></h3>
+          
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Death of Richard Williamson</a></h3>
+          <p>The expelled 1988 bishop and 'Resistance' leader dies at 84.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Election of Leo XIV</a></h3>
+          <p>After the death of Francis (21 April 2025), Robert Prevost is elected pope; his pontificate presides over the 2026 rupture with the SSPX.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Election of Leo XIV</a></h3>
+          <p>After the death of Francis (21 April 2025), Robert Prevost — for decades a bishop and missionary in Peru — is elected; liberation theologians' expressions of hope, and debate about his stance, are attributed to the sources reporting them.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">Death of Pepe Mujica</a></h3>
+          <p>José 'Pepe' Mujica, member and moral reference of the group, dies at 89; the group's tribute: 'despide al hombre que sirvió sin privilegios'.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Leo XIV receives the presidency</a></h3>
+          <p>Days after his election, the first pope with a Latin American episcopal career (Peru) receives Spengler and Estrada — among his first audiences.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">40th Assembly — the 70th anniversary</a></h3>
+          <p>The Ordinary General Assembly returns to CELAM's founding city for its seventieth year, under the sign of synodality and the new pontificate.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Clodovis Boff's open letter to CELAM</a></h3>
+          <p>The former liberation-theology systematizer, long an internal critic, publicly criticizes what he calls an 'excess' of social emphasis by the Latin American bishops, sparking controversy.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2025 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">'Democracia Siempre' — not a GdP event</a></h3>
+          <p>The summit of sitting presidents (Lula, Boric, Petro, Sánchez, Orsi) is a presidents' initiative that the Grupo de Puebla merely endorsed (statement of 24 July 2025) — included to prevent conflation.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2025 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">Jubilee-year pilgrimage</a></h3>
+          <p>The SSPX holds a worldwide pilgrimage to Rome for the 2025 Jubilee.</p>
+        </div>
+      </article>
+      <article class="ev ev-celam" data-project="celam">
+        <div class="ev-year">2025 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">CELAM</span>
+          <h3><a href="https://cronologia.github.io/celam/#chronology">Leo XIV encourages the synodal path</a></h3>
+          <p>The pope receives CELAM bishops, encouraging the continuation of the region's synodal process.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2025</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Leo XIV's 'Dilexi te'</a></h3>
+          <p>The first apostolic exhortation of Leo XIV, on love for the poor, begun under Francis — read by some commentators as continuity with liberationist emphases, a reading others dispute; both attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2025 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">Joint statement with the Progressive International</a></h3>
+          <p>The Grupo de Puebla and the Progressive International jointly condemn the US 'economic war' on Venezuela, signed by leaders from ~20 countries — confirming the two are distinct organizations that co-sign.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2026 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">Ordinations resume; the documentary case</a></h3>
+          <p>A single source reports the resumption of the Heralds' ordinations after a seven-year suspension — unverified, flagged; PT Wikipedia records the STF authorizing an HBO Max documentary on the group after an attempted judicial block.</p>
+        </div>
+      </article>
+      <article class="ev ev-tl" data-project="tl">
+        <div class="ev-year">2026</div>
+        <div class="ev-body">
+          <span class="ev-project">Teologia da Libertação</span>
+          <h3><a href="https://cronologia.github.io/tl/#chronology">Camilo Torres's remains identified</a></h3>
+          <p>The ELN reports finding and hands over the remains of the guerrilla priest, identified some 60 years after his 1966 death.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2026</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">New consecrations announced</a></h3>
+          <p>Superior General Pagliarani announces plans to consecrate new bishops on 1 July 2026, citing the age of the Society's remaining bishops and the unresolved doctrinal disagreement.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2026</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">DDF warning</a></h3>
+          <p>Cardinal Víctor Manuel Fernández formally warns that the planned consecrations would constitute 'a schismatic act' entailing excommunication; Pope Leo XIV follows with personal appeals in June.</p>
+        </div>
+      </article>
+      <article class="ev ev-rcc" data-project="rcc">
+        <div class="ev-year">2026</div>
+        <div class="ev-body">
+          <span class="ev-project">RCC</span>
+          <h3><a href="https://cronologia.github.io/rcc/#chronology">Leo XIV addresses the Renewal</a></h3>
+          <p>Leo XIV — who accompanied the Renewal during his Peruvian episcopate — receives the RCC/CHARIS, speaking on baptism in the Spirit, praise, communion and mission; he had presided at the Pentecost Mass of the Jubilee of Movements on 8 June 2025.</p>
+        </div>
+      </article>
+      <article class="ev ev-grupopuebla" data-project="grupopuebla">
+        <div class="ev-year">2026 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">Grupo de Puebla</span>
+          <h3><a href="https://cronologia.github.io/grupopuebla/#chronology">2026 activity</a></h3>
+          <p>From the official comunicados page (retrieved July 2026): statements on Bolivia's crisis (May), celebration of member Iván Cepeda reaching Colombia's presidential runoff (31 May), a virtual meeting of leaders from 23 countries (June), and a lawfare statement regarding Spain (July). No XI Encuentro has been held as of July 2026 — the official index still ends at Tegucigalpa.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2026</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">The 2026 Écône consecrations</a></h3>
+          <p>Bishops de Galarreta and Fellay consecrate four new bishops — Pascal Schreiber, Michael Goldade, Michel Poinsinet de Sivry and Marc Hanappier — without papal mandate.</p>
+        </div>
+      </article>
+      <article class="ev ev-fsspx" data-project="fsspx">
+        <div class="ev-year">2026</div>
+        <div class="ev-body">
+          <span class="ev-project">FSSPX</span>
+          <h3><a href="https://cronologia.github.io/fsspx/#chronology">New excommunications declared</a></h3>
+          <p>A DDF decree declares the six bishops involved excommunicated latae sententiae, describes SSPX clergy as being in schism, and revokes the 2015–2017 confession and marriage provisions; the SSPX rejects the decree as 'objectively unjust and invalid'. Press summaries differ on how the decree treats priests and laity — each reading is attributed.</p>
+        </div>
+      </article>
+      <article class="ev ev-tfp" data-project="tfp">
+        <div class="ev-year">2026 <span class="flag" title="date not fully verified — see the project page">?</span></div>
+        <div class="ev-body">
+          <span class="ev-project">TFP</span>
+          <h3><a href="https://cronologia.github.io/tfp/#chronology">The two branches today</a></h3>
+          <p>The IPCO carries the founders' line (street campaigns, anti-'gender ideology', public rosaries); the Heralds continue under canonical supervision; the international network remains active — American TFP with TFP Student Action, TFP France with Avenir de la Culture, Germany's DVCK, Poland's Piotr Skarga association, the Fédération Pro Europa Christiana — each autonomous. Critical NGO reports on the network (EPF) are labeled as hostile sources.</p>
+        </div>
+      </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Generated 2026-07-19 from the projects' public datasets — every event carries its
+      citations on its project page. <a href="https://github.com/cronologia">github.com/cronologia</a></p>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-project]'));
+      var events = Array.prototype.slice.call(document.querySelectorAll('.ev'));
+      var decades = Array.prototype.slice.call(document.querySelectorAll('.decade'));
+      function apply() {
+        var on = {};
+        chips.forEach(function (c) { on[c.dataset.project] = c.classList.contains('on'); });
+        events.forEach(function (e) { e.classList.toggle('hidden', !on[e.dataset.project]); });
+        var current = null;
+        decades.forEach(function (d) { d.style.display = 'none'; });
+        events.forEach(function (e) {
+          if (!e.classList.contains('hidden')) {
+            var el = e.previousElementSibling;
+            while (el && !el.classList.contains('decade')) el = el.previousElementSibling;
+            if (el) el.style.display = '';
+          }
+        });
+      }
+      chips.forEach(function (c) {
+        c.addEventListener('click', function () { c.classList.toggle('on'); apply(); });
+      });
+      document.getElementById('toggle-all').addEventListener('click', function () {
+        var anyOff = chips.some(function (c) { return !c.classList.contains('on'); });
+        chips.forEach(function (c) { c.classList.toggle('on', anyOff); });
+        apply();
+      });
+    })();
+  </script>
+</body>
+</html>
