@@ -49,7 +49,15 @@ page and check the same sources.
 | [`fsspx`](https://github.com/cronologia/fsspx) | **Fraternidade Sacerdotal São Pio X** — the traditionalist priestly society founded by Marcel Lefebvre, 1970 | [/fsspx/](https://cronologia.github.io/fsspx/) |
 | [`tl`](https://github.com/cronologia/tl) | **Teologia da Libertação** — the Latin American theological movement, 1968– | [/tl/](https://cronologia.github.io/tl/) |
 
-The three form two threads that cross in Brazil: the **Latin American left**
+### Support repositories
+
+| Repo | Role |
+| --- | --- |
+| [`core`](https://github.com/cronologia/core) | Project template, shared tools (build, validation, transcripts) and Claude skills encoding the working method |
+| [`glossary`](https://github.com/cronologia/glossary) | Shared glossary — cited definitions with one stable anchor per term ([site](https://cronologia.github.io/glossary/)) |
+| `archive` (private) | Internal vault for sources shared across projects; reader-facing citations use original URLs + Wayback snapshots |
+
+The three chronologies form two threads that cross in Brazil: the **Latin American left**
 (fsp, fed by the church base communities documented in tl) and **Catholicism
 after Vatican II** (tl on one side, fsspx on the other). Candidate projects to
 extend those threads — Vatican II, the PT, the Grupo de Puebla, CELAM, the TFP
