@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cronologia — source-referenced chronologies of contested subjects</title>
-  <meta name="description" content="Open, source-referenced chronologies of contested subjects in Latin American political and religious history: the Foro de São Paulo, the Fraternidade Sacerdotal São Pio X, and Teologia da Libertação.">
+  <meta name="description" content="Open, source-referenced chronologies of contested subjects in Latin American political and religious history — nine projects covering movements and institutions of the Catholic Church, the Latin American left, and the Traditionalist School. Every fact cited to a public source.">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9LV1QZHVE"></script>
   <script>
@@ -26,6 +26,8 @@
       --puebla: #c2410c; --puebla-dark: #8a2d08;
       --tfp: #713f12; --tfp-dark: #4a290b;
       --rcc: #be185d; --rcc-dark: #831244;
+      --gloss: #475569; --gloss-dark: #2c3644;
+      --core: #334155; --core-dark: #1f2937;
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
@@ -36,12 +38,19 @@
     .site-header .lead { margin: 0; max-width: 68ch; opacity: .95; }
     main { padding: 2.25rem 1.25rem 3rem; }
     h2 { font-size: 1.4rem; border-bottom: 2px solid var(--line); padding-bottom: .4rem; margin: 2.25rem 0 1rem; }
+    .group { margin: 0 0 2.25rem; }
+    .group > h2 { margin-bottom: .3rem; }
+    .group-desc { margin: 0 0 1rem; max-width: 68ch; font-size: .95rem; color: var(--muted); }
+    .grouping-note { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--muted); border-radius: 6px; padding: .9rem 1.1rem; margin: 0 0 2rem; font-size: .92rem; color: var(--muted); max-width: 72ch; }
+    .grouping-note strong { display: block; color: var(--ink); margin-bottom: .2rem; }
     .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
     .project { display: flex; flex-direction: column; gap: .35rem; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--muted); border-radius: 8px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); transition: box-shadow .12s ease, transform .12s ease; }
-    .project:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); transform: translateY(-2px); }
+    a.project:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); transform: translateY(-2px); }
     .project h3 { margin: 0; font-size: 1.12rem; }
     .project .years { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
     .project p { margin: .2rem 0 0; font-size: .9rem; color: var(--muted); }
+    .project .state { align-self: flex-start; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .08rem .5rem; }
+    .project--nolink { background: #f6f4f0; }
     .p-fsp { border-top-color: var(--fsp); } .p-fsp .years, .p-fsp h3 { color: var(--fsp-dark); }
     .p-fsspx { border-top-color: var(--fsspx); } .p-fsspx .years, .p-fsspx h3 { color: var(--fsspx-dark); }
     .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
@@ -51,6 +60,8 @@
     .p-puebla { border-top-color: var(--puebla); } .p-puebla .years, .p-puebla h3 { color: var(--puebla-dark); }
     .p-tfp { border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
     .p-rcc { border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
+    .p-gloss { border-top-color: var(--gloss); } .p-gloss .years, .p-gloss h3 { color: var(--gloss-dark); }
+    .p-core { border-top-color: var(--core); } .p-core .years, .p-core h3 { color: var(--core-dark); }
     .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
     .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
     .principles strong { display: block; margin-bottom: .2rem; }
@@ -81,72 +92,134 @@
       <span>All 282 events of the nine projects on one filterable timeline — see the intersections
       side by side.</span>
     </a>
-    <h2>Projects</h2>
-    <div class="projects">
-      <a class="project p-fsp" href="/fsp/">
-        <span class="years">1990–present</span>
-        <h3>Foro de São Paulo</h3>
-        <p>The conference of left-wing parties and organizations of Latin America and the
-        Caribbean: every meeting, member parties, presidencies, legislatures and courts —
-        with a year-by-year map of the region.</p>
-      </a>
-      <a class="project p-fsspx" href="/fsspx/">
-        <span class="years">1970–present</span>
-        <h3>Fraternidade Sacerdotal São Pio X</h3>
-        <p>The traditionalist priestly society founded by Marcel Lefebvre and its relationship
-        with the Holy See — from Écône 1988 to the 2026 rupture, with the full episcopal
-        genealogy of the traditionalist lines.</p>
-      </a>
-      <a class="project p-tl" href="/tl/">
-        <span class="years">1960s–present</span>
-        <h3>Teologia da Libertação</h3>
-        <p>The Latin American theological movement — Medellín, Gutiérrez, the Vatican
-        instructions, the martyrs and the later reception — with a map of where its story
-        happened.</p>
-      </a>
-      <a class="project p-tariqa" href="/tariqa/">
-        <span class="years">1886–present</span>
-        <h3>Tariqa Maryamiyya</h3>
-        <p>The Sufi order of Frithjof Schuon and the Traditionalist School (Guénon–Schuon
-        perennialism) — and its documented connections to Catholic traditionalism and to
-        Brazil.</p>
-      </a>
-      <a class="project p-peren" href="/perennialism/">
-        <span class="years">1921–present</span>
-        <h3>Perennialism</h3>
-        <p>The Traditionalist School as a movement of ideas — Guénon's corpus, the journals,
-        Evola's political adaptation and its receptions, and the academic institutionalization
-        of the perennial philosophy.</p>
-      </a>
-      <a class="project p-celam" href="/celam/">
-        <span class="years">1955–present</span>
-        <h3>CELAM</h3>
-        <p>The Latin American bishops' council as an institution — the five General
-        Conferences (Rio to Aparecida), the assemblies, presidencies and reforms; the
-        interpretation wars live in the TL project.</p>
-      </a>
-      <a class="project p-puebla" href="/grupopuebla/">
-        <span class="years">2019–present</span>
-        <h3>Grupo de Puebla</h3>
-        <p>The progressive forum of individuals founded in Puebla 2019 — encuentros,
-        declarations, CLAJUD — and the documented disambiguation from the Foro de São
-        Paulo, with which it is constantly conflated.</p>
-      </a>
-      <a class="project p-tfp" href="/tfp/">
-        <span class="years">1908–present</span>
-        <h3>TFP / Plinio Corrêa de Oliveira</h3>
-        <p>The lay traditionalist movement founded in 1960 — the campaigns, the 1985 CNBB
-        note, the succession dispute, and the two branches of today: the Heralds of the
-        Gospel and the IPCO.</p>
-      </a>
-      <a class="project p-rcc" href="/rcc/">
-        <span class="years">1967–present</span>
-        <h3>Renovação Carismática Católica</h3>
-        <p>The Catholic Charismatic Renewal from the 1967 Duquesne Weekend to CHARIS —
-        with the Brazilian movement: Rahm and Dougherty, Canção Nova, Shalom, the CNBB's
-        1994 guidelines and the media wave.</p>
-      </a>
-    </div>
+
+    <p class="grouping-note"><strong>Nine chronologies, grouped by subject area.</strong>
+    The groups below are a navigational aid, not a claim about the subjects. Projects listed
+    together are not thereby asserted to share a programme, an alliance, an origin or an
+    identity — several of them are opposed to each other, and the datasets document that with
+    sources. Each chronology stands on its own.</p>
+
+    <section class="group">
+      <h2>The Catholic Church</h2>
+      <p class="group-desc">Movements, institutions and disputes inside the Catholic Church —
+      traditionalist opposition, charismatic renewal, liberation theology, and the Latin American
+      episcopate they all argue about. Grouped by the institution whose history they belong to,
+      not by any shared position within it.</p>
+      <div class="projects">
+        <a class="project p-fsspx" href="/fsspx/">
+          <span class="years">1970–present</span>
+          <h3>Fraternidade Sacerdotal São Pio X</h3>
+          <p>The traditionalist priestly society founded by Marcel Lefebvre and its relationship
+          with the Holy See — from Écône 1988 to the 2026 rupture, with the full episcopal
+          genealogy of the traditionalist lines.</p>
+        </a>
+        <a class="project p-tfp" href="/tfp/">
+          <span class="years">1908–present</span>
+          <h3>TFP / Plinio Corrêa de Oliveira</h3>
+          <p>The lay traditionalist movement founded in 1960 — the campaigns, the 1985 CNBB
+          note, the succession dispute, and the two branches of today: the Heralds of the
+          Gospel and the IPCO.</p>
+        </a>
+        <a class="project p-rcc" href="/rcc/">
+          <span class="years">1967–present</span>
+          <h3>Renovação Carismática Católica</h3>
+          <p>The Catholic Charismatic Renewal from the 1967 Duquesne Weekend to CHARIS —
+          with the Brazilian movement: Rahm and Dougherty, Canção Nova, Shalom, the CNBB's
+          1994 guidelines and the media wave.</p>
+        </a>
+        <a class="project p-tl" href="/tl/">
+          <span class="years">1960s–present</span>
+          <h3>Teologia da Libertação</h3>
+          <p>The Latin American theological movement — Medellín, Gutiérrez, the Vatican
+          instructions, the martyrs and the later reception — with a map of where its story
+          happened.</p>
+        </a>
+        <a class="project p-celam" href="/celam/">
+          <span class="years">1955–present</span>
+          <h3>CELAM</h3>
+          <p>The Latin American bishops' council as an institution — the five General
+          Conferences (Rio to Aparecida), the assemblies, presidencies and reforms; the
+          interpretation wars live in the TL project.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>The Latin American left</h2>
+      <p class="group-desc">The regional forums where left-wing parties and politicians of Latin
+      America and the Caribbean meet — two distinct bodies, with different founders, memberships
+      and forms, that are routinely conflated and are documented separately here.</p>
+      <div class="projects">
+        <a class="project p-fsp" href="/fsp/">
+          <span class="years">1990–present</span>
+          <h3>Foro de São Paulo</h3>
+          <p>The conference of left-wing parties and organizations of Latin America and the
+          Caribbean: every meeting, member parties, presidencies, legislatures and courts —
+          with a year-by-year map of the region.</p>
+        </a>
+        <a class="project p-puebla" href="/grupopuebla/">
+          <span class="years">2019–present</span>
+          <h3>Grupo de Puebla</h3>
+          <p>The progressive forum of individuals founded in Puebla 2019 — encuentros,
+          declarations, CLAJUD — and the documented disambiguation from the Foro de São
+          Paulo, with which it is constantly conflated.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Esoteric and perennialist currents</h2>
+      <p class="group-desc">The Traditionalist School of René Guénon and Frithjof Schuon — a
+      twentieth-century current of ideas about a perennial philosophy, and the initiatic order
+      that grew out of it. These are chronologies of that school's own history, not of the
+      religious traditions its authors wrote about.</p>
+      <div class="projects">
+        <a class="project p-tariqa" href="/tariqa/">
+          <span class="years">1886–present</span>
+          <h3>Tariqa Maryamiyya</h3>
+          <p>The Sufi order of Frithjof Schuon and the Traditionalist School (Guénon–Schuon
+          perennialism) — and its documented connections to Catholic traditionalism and to
+          Brazil.</p>
+        </a>
+        <a class="project p-peren" href="/perennialism/">
+          <span class="years">1921–present</span>
+          <h3>Perennialism</h3>
+          <p>The Traditionalist School as a movement of ideas — Guénon's corpus, the journals,
+          Evola's political adaptation and its receptions, and the academic institutionalization
+          of the perennial philosophy.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Reference</h2>
+      <p class="group-desc">Not chronologies: the shared resources the projects are built on — the
+      cross-project definitions readers can follow, and the working repositories behind the sites.</p>
+      <div class="projects">
+        <a class="project p-gloss" href="/glossary/">
+          <span class="years">Cross-project</span>
+          <h3>Shared glossary</h3>
+          <p>Cited definitions of the recurring terms, one dedicated page per term, so every
+          chronology links to the same stable explanation instead of redefining it.</p>
+        </a>
+        <a class="project p-core" href="https://github.com/cronologia/core">
+          <span class="years">Working repository</span>
+          <h3>core</h3>
+          <p>The project template and shared tooling every site is cloned from — build script,
+          data validator, preservation tools and the written working method. A code repository:
+          it publishes no reader-facing pages of its own.</p>
+        </a>
+        <div class="project project--nolink">
+          <span class="years">Working repository</span>
+          <h3>archive</h3>
+          <span class="state">Private repository</span>
+          <p>The internal vault of working copies of cited sources, shared across projects. It is
+          private and cannot be opened by readers — which is why reader-facing citations always
+          point at the original URL plus its Wayback snapshot instead.</p>
+        </div>
+      </div>
+    </section>
+
     <h2>How these sites work</h2>
     <ul class="principles">
       <li><strong>Verifiability over completeness</strong> Every entry cites its sources; uncertain dates carry a visible <b>?</b> flag rather than a guess.</li>
@@ -155,6 +228,7 @@
       <li><strong>Radical simplicity</strong> One JSON dataset, one zero-dependency compiler, plain HTML on GitHub Pages. Nothing that will be unbuildable in five years.</li>
       <li><strong>Open correction</strong> All data is public JSON in public repositories — corrections against primary sources are welcome as issues or pull requests.</li>
     </ul>
+
     <h2>What's next</h2>
     <p class="roadmap">Candidate chronologies — the Partido dos Trabalhadores, the Fórum
     Social Mundial, the Brazilian New Right and more — are tracked as issues in the
