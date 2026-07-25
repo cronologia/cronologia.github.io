@@ -27,6 +27,8 @@
       --tfp: #713f12; --tfp-dark: #4a290b;
       --rcc: #be185d; --rcc-dark: #831244;
       --ref: #4b5563;
+      --gloss: #475569; --gloss-dark: #2c3644;
+      --core: #334155; --core-dark: #1f2937;
     }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
@@ -39,7 +41,7 @@
     h2 { font-size: 1.4rem; border-bottom: 2px solid var(--line); padding-bottom: .4rem; margin: 2.25rem 0 1rem; }
     .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
     .project { display: flex; flex-direction: column; gap: .35rem; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--muted); border-radius: 8px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); transition: box-shadow .12s ease, transform .12s ease; }
-    .project:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); transform: translateY(-2px); }
+    a.project:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); transform: translateY(-2px); }
     .project h3 { margin: 0; font-size: 1.12rem; }
     .project .years { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
     .project p { margin: .2rem 0 0; font-size: .9rem; color: var(--muted); }
@@ -52,6 +54,10 @@
     .p-puebla { border-top-color: var(--puebla); } .p-puebla .years, .p-puebla h3 { color: var(--puebla-dark); }
     .p-tfp { border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
     .p-rcc { border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
+    .p-gloss { border-top-color: var(--gloss); } .p-gloss .years, .p-gloss h3 { color: var(--gloss-dark); }
+    .p-core { border-top-color: var(--core); } .p-core .years, .p-core h3 { color: var(--core-dark); }
+    .project--nolink { background: #f6f4f0; }
+    .project .state { align-self: flex-start; font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .08rem .5rem; }
     .group { margin: 0 0 2.25rem; }
     .group > h2 { margin-bottom: .3rem; }
     .group-desc { margin: 0 0 1rem; max-width: 68ch; font-size: .95rem; color: var(--muted); }
@@ -60,15 +66,11 @@
     .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
     .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
     .principles strong { display: block; margin-bottom: .2rem; }
-    .tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 0 0 1.75rem; }
-    .master-banner { display: block; background: linear-gradient(135deg, #23283a, #3b4257); color: #fff; border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; margin: 0; }
+    .master-banner { display: block; background: linear-gradient(135deg, #23283a, #3b4257); color: #fff; border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; margin: 0 0 1.75rem; }
+    .master-banner--alt { background: linear-gradient(135deg, #3f3a2f, #5b5344); }
     .master-banner:hover { box-shadow: 0 4px 14px rgba(0,0,0,.25); }
     .master-banner strong { font-size: 1.05rem; }
     .master-banner span { display: block; font-size: .88rem; opacity: .85; margin-top: .15rem; }
-    .ref-banner { display: block; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-left: 5px solid var(--ref); border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; margin: 0; }
-    .ref-banner:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); }
-    .ref-banner strong { font-size: 1.05rem; }
-    .ref-banner span { display: block; font-size: .88rem; color: var(--muted); margin-top: .15rem; }
     .roadmap { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #c47f17; border-radius: 6px; padding: .9rem 1.1rem; font-size: .95rem; }
     .roadmap a { color: #9a6410; font-weight: 600; }
     .site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .85rem; }
@@ -88,18 +90,16 @@
     </div>
   </header>
   <main class="wrap">
-    <div class="tools">
-      <a class="master-banner" href="/chronology/">
-        <strong>⏳ Master chronology →</strong>
-        <span>All 282 events of the nine projects on one filterable timeline — see the intersections
-        side by side.</span>
-      </a>
-      <a class="ref-banner" href="/glossary/">
-        <strong>📖 Shared glossary →</strong>
-        <span>Cited definitions of the recurring terms, one page per term, cross-referenced from
-        every chronology.</span>
-      </a>
-    </div>
+    <a class="master-banner" href="/chronology/">
+      <strong>⏳ Master chronology →</strong>
+      <span>All 282 events of the nine projects on one filterable timeline — see the intersections
+      side by side.</span>
+    </a>
+    <a class="master-banner master-banner--alt" href="/glossary/">
+      <strong>📖 Shared glossary →</strong>
+      <span>Cited definitions of the recurring terms, one page per term, so every chronology links
+      to the same stable explanation instead of redefining it.</span>
+    </a>
 
     <p class="grouping-note"><strong>Nine chronologies, grouped by subject area.</strong>
     The groups below are a navigational aid, not a claim about the subjects. Projects listed
@@ -197,6 +197,7 @@
       </div>
     </section>
 
+
     <h2>How these sites work</h2>
     <ul class="principles">
       <li><strong>Verifiability over completeness</strong> Every entry cites its sources; uncertain dates carry a visible <b>?</b> flag rather than a guess.</li>
@@ -213,11 +214,8 @@
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>Cronologia — open data on <a href="https://github.com/cronologia">github.com/cronologia</a>. MIT licensed.</p>
-      <p>Each chronology's dataset lives in its own public repository, alongside the shared
-      project template and tooling. Working copies of cited sources are kept in a private
-      vault that publishes no pages of its own — reader-facing citations always point at the
-      original URL and its Wayback snapshot.</p>
+      <p>Cronologia — open data on <a href="https://github.com/cronologia">github.com/cronologia</a>. MIT licensed.
+      Each chronology's dataset lives in its own public repository.</p>
     </div>
   </footer>
 </body>
