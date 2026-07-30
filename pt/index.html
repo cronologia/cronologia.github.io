@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cronologia — cronologias de temas controversos referenciadas a fontes</title>
+  <meta name="description" content="Cronologias abertas, referenciadas a fontes, de temas controversos da história política e religiosa da América Latina — nove projetos cobrindo movimentos e instituições da Igreja Católica, a esquerda latino-americana e a Escola Tradicionalista. Cada fato citado a uma fonte pública.">
+  <link rel="canonical" href="https://cronologia.github.io/pt/">
+  <link rel="alternate" hreflang="en" href="https://cronologia.github.io/en/">
+  <link rel="alternate" hreflang="es" href="https://cronologia.github.io/es/">
+  <link rel="alternate" hreflang="pt" href="https://cronologia.github.io/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://cronologia.github.io/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9LV1QZHVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R9LV1QZHVE');
+  </script>
+  <style>
+    :root {
+      --bg: #faf8f5; --surface: #ffffff; --ink: #1d2330; --muted: #6b7280;
+      --line: #e4e0d8; --maxw: 920px;
+      --fsp: #b8252b; --fsp-dark: #7a1418;
+      --fsspx: #1e4f8f; --fsspx-dark: #12365f;
+      --tl: #1b7a3d; --tl-dark: #114f27;
+      --tariqa: #0e7490; --tariqa-dark: #0a4e60;
+      --peren: #5b21b6; --peren-dark: #3b1580;
+      --celam: #831843; --celam-dark: #5a0f2e;
+      --puebla: #c2410c; --puebla-dark: #8a2d08;
+      --tfp: #713f12; --tfp-dark: #4a290b;
+      --rcc: #be185d; --rcc-dark: #831244;
+      --ref: #4b5563;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+    .i18n-disclaimer { background: #fdf3e3; border-bottom: 1px solid #ecd9b0; color: #6b5518; font-size: .82rem; padding: .45rem 1.25rem; text-align: center; }
+    .site-header { background: linear-gradient(135deg, #23283a, #3b4257); color: #fff; padding: 3.5rem 0 2.5rem; position: relative; }
+    .site-header h1 { margin: 0 0 .25rem; font-size: 2.4rem; letter-spacing: -.5px; }
+    .site-header .subtitle { margin: 0 0 1rem; font-size: 1.15rem; opacity: .92; }
+    .site-header .lead { margin: 0; max-width: 68ch; opacity: .95; }
+    .lang-switch { position: absolute; top: 1rem; right: 1.25rem; font-size: .8rem; }
+    .lang-switch a, .lang-switch .lang-current { color: #cfd6e4; text-decoration: none; padding: .15rem .4rem; border-radius: 4px; }
+    .lang-switch .lang-current { background: rgba(255,255,255,.18); color: #fff; font-weight: 700; }
+    .lang-switch a:hover { background: rgba(255,255,255,.1); }
+    main { padding: 2.25rem 1.25rem 3rem; }
+    h2 { font-size: 1.4rem; border-bottom: 2px solid var(--line); padding-bottom: .4rem; margin: 2.25rem 0 1rem; }
+    .group { margin: 0 0 2.25rem; }
+    .group > h2 { margin-bottom: .3rem; }
+    .group-desc { margin: 0 0 1rem; max-width: 68ch; font-size: .95rem; color: var(--muted); }
+    .grouping-note { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--ref); border-radius: 6px; padding: .9rem 1.1rem; margin: 0 0 2rem; font-size: .92rem; color: var(--muted); max-width: 72ch; }
+    .grouping-note strong { display: block; color: var(--ink); margin-bottom: .2rem; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .project { display: flex; flex-direction: column; gap: .35rem; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--muted); border-radius: 8px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); transition: box-shadow .12s ease, transform .12s ease; }
+    a.project:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); transform: translateY(-2px); }
+    .project h3 { margin: 0; font-size: 1.12rem; }
+    .project .years { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    .project p { margin: .2rem 0 0; font-size: .9rem; color: var(--muted); }
+    .p-fsp { border-top-color: var(--fsp); } .p-fsp .years, .p-fsp h3 { color: var(--fsp-dark); }
+    .p-fsspx { border-top-color: var(--fsspx); } .p-fsspx .years, .p-fsspx h3 { color: var(--fsspx-dark); }
+    .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
+    .p-tariqa { border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
+    .p-peren { border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }
+    .p-celam { border-top-color: var(--celam); } .p-celam .years, .p-celam h3 { color: var(--celam-dark); }
+    .p-puebla { border-top-color: var(--puebla); } .p-puebla .years, .p-puebla h3 { color: var(--puebla-dark); }
+    .p-tfp { border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
+    .p-rcc { border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
+    .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
+    .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
+    .principles strong { display: block; margin-bottom: .2rem; }
+    .master-banner { display: block; background: linear-gradient(135deg, #23283a, #3b4257); color: #fff; border-radius: 8px; padding: 1rem 1.25rem; text-decoration: none; margin: 0 0 1.75rem; }
+    .master-banner--alt { background: linear-gradient(135deg, #3f3a2f, #5b5344); }
+    .master-banner:hover { box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+    .master-banner strong { font-size: 1.05rem; }
+    .master-banner span { display: block; font-size: .88rem; opacity: .85; margin-top: .15rem; }
+    .roadmap { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid #c47f17; border-radius: 6px; padding: .9rem 1.1rem; font-size: .95rem; }
+    .roadmap a { color: #9a6410; font-weight: 600; }
+    .site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .85rem; }
+    .site-footer p { margin: 0 0 .4rem; max-width: 78ch; }
+    .site-footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="i18n-disclaimer" role="note">🌐 Tradução automática do inglês; a página em inglês é a versão de referência.</div>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="lang-switch" aria-label="Idioma"><a href="/en/" hreflang="en">EN</a><a href="/es/" hreflang="es">ES</a><span class="lang-current" aria-current="true">PT</span></nav>
+      <h1>Cronologia</h1>
+      <p class="subtitle">Cronologias de temas controversos, referenciadas a fontes</p>
+      <p class="lead">Linhas do tempo de organizações e movimentos da história política e religiosa da América Latina — cada fato citado a uma fonte pública, cada data incerta sinalizada, cada afirmação controversa atribuída a seu autor. Em terreno disputado, uma linha do tempo verificável é mais útil do que mais uma opinião.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <a class="master-banner" href="/pt/chronology/">
+      <strong>⏳ Cronologia geral →</strong>
+      <span>Todos os 343 eventos dos nove projetos em uma única linha do tempo filtrável — veja as interseções lado a lado.</span>
+    </a>
+    <a class="master-banner master-banner--alt" href="/glossary/pt/">
+      <strong>📖 Glossário compartilhado →</strong>
+      <span>Definições citadas dos termos recorrentes, uma página por termo, para que cada cronologia aponte para a mesma explicação estável em vez de redefini-la.</span>
+    </a>
+
+    <p class="grouping-note"><strong>Nove cronologias, agrupadas por área temática.</strong>
+    Os grupos abaixo são um auxílio de navegação, não uma afirmação sobre os temas. Projetos listados juntos não estão, por isso, sendo afirmados como partilhando um programa, uma aliança, uma origem ou uma identidade — vários deles se opõem uns aos outros, e os datasets documentam isso com fontes. Cada cronologia se sustenta por si só.</p>
+
+    <section class="group">
+      <h2>A Igreja Católica</h2>
+      <p class="group-desc">Movimentos, instituições e disputas dentro da Igreja Católica — a oposição tradicionalista, a renovação carismática, a teologia da libertação e o episcopado latino-americano sobre o qual todos discutem. Agrupados pela instituição a cuja história pertencem, não por qualquer posição compartilhada dentro dela.</p>
+      <div class="projects">
+        <a class="project p-fsspx" href="/fsspx/pt/">
+          <span class="years">1970–presente</span>
+          <h3>Fraternidade Sacerdotal São Pio X</h3>
+          <p>A sociedade sacerdotal tradicionalista fundada por Marcel Lefebvre e sua relação com a Santa Sé — de Écône 1988 à ruptura de 2026, com a genealogia episcopal completa das linhas tradicionalistas.</p>
+        </a>
+        <a class="project p-tfp" href="/tfp/">
+          <span class="years">1908–presente</span>
+          <h3>TFP / Plinio Corrêa de Oliveira</h3>
+          <p>O movimento tradicionalista leigo fundado em 1960 — as campanhas, a nota da CNBB de 1985, a disputa sucessória e os dois ramos de hoje: os Arautos do Evangelho e o IPCO.</p>
+        </a>
+        <a class="project p-rcc" href="/rcc/pt/">
+          <span class="years">1967–presente</span>
+          <h3>Renovação Carismática Católica</h3>
+          <p>A Renovação Carismática Católica do fim de semana de Duquesne de 1967 ao CHARIS — com o movimento brasileiro: Rahm e Dougherty, Canção Nova, Shalom, as orientações da CNBB de 1994 e a onda midiática.</p>
+        </a>
+        <a class="project p-tl" href="/tl/">
+          <span class="years">anos 1960–presente</span>
+          <h3>Teologia da Libertação</h3>
+          <p>O movimento teológico latino-americano — Medellín, Gutiérrez, as instruções vaticanas, os mártires e a recepção posterior — com um mapa de onde sua história aconteceu.</p>
+        </a>
+        <a class="project p-celam" href="/celam/">
+          <span class="years">1955–presente</span>
+          <h3>CELAM</h3>
+          <p>O conselho episcopal latino-americano como instituição — as cinco Conferências Gerais (do Rio a Aparecida), as assembleias, presidências e reformas; as guerras de interpretação vivem no projeto TL.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>A esquerda latino-americana</h2>
+      <p class="group-desc">Os foros regionais onde se reúnem os partidos e políticos de esquerda da América Latina e do Caribe — dois organismos distintos, com fundadores, composições e formas diferentes, que são rotineiramente confundidos e que aqui são documentados separadamente.</p>
+      <div class="projects">
+        <a class="project p-fsp" href="/fsp/">
+          <span class="years">1990–presente</span>
+          <h3>Foro de São Paulo</h3>
+          <p>A conferência de partidos e organizações de esquerda da América Latina e do Caribe: cada encontro, os partidos membros, presidências, legislaturas e cortes — com um mapa ano a ano da região.</p>
+        </a>
+        <a class="project p-puebla" href="/grupopuebla/">
+          <span class="years">2019–presente</span>
+          <h3>Grupo de Puebla</h3>
+          <p>O foro progressista de pessoas fundado em Puebla em 2019 — encontros, declarações, CLAJUD — e a desambiguação documentada em relação ao Foro de São Paulo, com o qual é constantemente confundido.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>Correntes esotéricas e perenialistas</h2>
+      <p class="group-desc">A Escola Tradicionalista de René Guénon e Frithjof Schuon — uma corrente de ideias do século XX sobre uma filosofia perene, e a ordem iniciática que dela surgiu. São cronologias da história dessa escola, não das tradições religiosas sobre as quais seus autores escreveram.</p>
+      <div class="projects">
+        <a class="project p-tariqa" href="/tariqa/pt/">
+          <span class="years">1886–presente</span>
+          <h3>Tariqa Maryamiyya</h3>
+          <p>A ordem sufi de Frithjof Schuon e a Escola Tradicionalista (o perenialismo de Guénon e Schuon) — e suas conexões documentadas com o tradicionalismo católico e com o Brasil.</p>
+        </a>
+        <a class="project p-peren" href="/perennialism/pt/">
+          <span class="years">1921–presente</span>
+          <h3>Perenialismo</h3>
+          <p>A Escola Tradicionalista como movimento de ideias — o corpus de Guénon, as revistas, a adaptação política de Evola e suas recepções, e a institucionalização acadêmica da filosofia perene.</p>
+        </a>
+      </div>
+    </section>
+
+    <h2>Como estes sites funcionam</h2>
+    <ul class="principles">
+      <li><strong>Verificabilidade acima de completude</strong> Cada entrada cita suas fontes; datas incertas levam uma marca <b>?</b> visível em vez de um palpite.</li>
+      <li><strong>Neutralidade por atribuição</strong> As caracterizações controversas são atribuídas — quem o diz, quando — com fontes de todo o espectro, rotuladas por perspectiva.</li>
+      <li><strong>Evidência duradoura</strong> As referências são arquivadas na Wayback Machine e os documentos voláteis são guardados em cofre, para que as citações continuem verificáveis por anos.</li>
+      <li><strong>Simplicidade radical</strong> Um dataset JSON, um compilador sem dependências, HTML puro no GitHub Pages. Nada que se torne incompilável em cinco anos.</li>
+      <li><strong>Correção aberta</strong> Todos os dados são JSON público em repositórios públicos — correções contra fontes primárias são bem-vindas como issues ou pull requests.</li>
+    </ul>
+
+    <h2>O que vem a seguir</h2>
+    <p class="roadmap">Cronologias candidatas — o Partido dos Trabalhadores, o Fórum Social Mundial, a Nova Direita brasileira e mais — são acompanhadas como issues no <a href="https://github.com/cronologia/cronologia.github.io/issues">repositório do portal</a>. Sugestões são bem-vindas.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Cronologia — dados abertos em <a href="https://github.com/cronologia">github.com/cronologia</a>. Licença MIT. O dataset de cada cronologia vive em seu próprio repositório público.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -86,6 +86,35 @@ Records ([`fsp/docs/adrs/`](https://github.com/cronologia/fsp/tree/master/docs/a
 explain *why* things are built this way. The younger projects mirror it;
 extracting the duplicated toolkit into a shared template is on the roadmap here.
 
+## This repo: how the hub itself is built
+
+**Decision (issue #20): the hub is generated, not hand-maintained.** It began
+as a single hand-written `index.html`; adding the `pt`/`es` locales would have
+meant three hand-edited copies of every future change, guaranteed to drift in
+exactly the copy where drift is dangerous (the "grouping is navigational, not
+a claim" note). Since `/chronology/` already required a build step, the
+landing adopted the same pattern — the no-frameworks principle above is about
+durability, not about avoiding a zero-dependency Node script.
+
+```
+build-chronology.js  aggregates every project's public dataset →
+                     {en,es,pt}/chronology/index.html + chronology/stats.json
+build-index.js       landing page (English authored INSIDE the script) →
+                     {en,es,pt}/index.html, the / and /chronology/ redirect
+                     stubs, sitemap.xml, robots.txt. Run it second — it bakes
+                     stats.json's figures into the banner (issue #21).
+i18n/{es,pt}.json    hub UI translations, keyed by the exact English string;
+                     a missing key falls back to English and is reported by
+                     the build. Event text on /chronology/ reuses each
+                     project's own committed data/i18n caches — the hub never
+                     re-translates.
+```
+
+The hub serves the domain root, so the locale is the FIRST path segment
+(`/{en,es,pt}/…`) — the one structural exception to the family's
+`/<project>/{en,es,pt}/` scheme (core#9). Non-English pages carry the family's
+visible machine-translation disclaimer; English is authoritative.
+
 ## Contributing
 
 Pick a project, read its `AGENTS.md` and `context.md`, and open an issue or PR.
