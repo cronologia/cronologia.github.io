@@ -1,0 +1,58 @@
+name: Rebuild master chronology
+
+# The hub aggregates every project's public dataset at build time, so the
+# committed /chronology/ goes stale as the projects grow — by 2026-07-30 it
+# had drifted 61 events (282 shown vs 343 live; issues #21/#22). This
+# workflow makes that fix permanent: rebuild weekly (and on demand), commit
+# only when output changed.
+#
+# Fail-safe by construction: build-chronology.js throws on any project fetch
+# failure, so a partial aggregation is never committed — the page either
+# covers all nine projects or this run turns red.
+#
+# The generated date in the footer/captions moves on every rebuild, so a
+# quiet week still produces a small date-refresh commit. That is intentional:
+# on a site whose first principle is verifiability, "Generated <date>" is a
+# freshness claim, and it should only advance when the aggregation actually
+# re-ran.
+
+on:
+  schedule:
+    - cron: '53 5 * * 1' # weekly, Monday 05:53 UTC (before the projects' wayback/link-health runs)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-chronology
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Rebuild the aggregation and the landing
+        run: |
+          node build-chronology.js
+          node build-index.js
+
+      - name: Commit and push if anything changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes — datasets unchanged since the committed build."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          events=$(node -e "process.stdout.write(String(require('./chronology/stats.json').events))")
+          git commit -m "Rebuild master chronology (${events} events) [skip ci]" \
+            -m "Scheduled aggregation refresh — see .github/workflows/rebuild-chronology.yml."
+          git push
