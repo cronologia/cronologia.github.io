@@ -133,6 +133,7 @@ function adaptFsp(data) {
     title: `${m.edition ? `${m.edition} ` : ''}Encontro — ${m.city}, ${m.country}`,
     text: m.notes || '',
     link: `${SITE}/fsp/meetings/${m.year}.html`,
+    sub: `meetings/${m.year}.html`, // locale-aware deep link target within the project
   }));
 }
 
@@ -463,21 +464,17 @@ async function main() {
     const data = await fetchJson(`${RAW}/${p.id}/main/${p.file}`);
     const langs = new Set(['en']);
     const dicts = {};
-    if (p.id !== 'fsp') {
-      for (const lang of ['es', 'pt']) {
-        if (await headOk(`${RAW}/${p.id}/main/docs/${lang}/index.html`)) {
-          langs.add(lang);
-          try {
-            dicts[lang] = (await fetchJson(`${RAW}/${p.id}/main/data/i18n/${lang}.json`)).strings || {};
-          } catch {
-            dicts[lang] = {};
-          }
+    for (const lang of ['es', 'pt']) {
+      if (await headOk(`${RAW}/${p.id}/main/docs/${lang}/index.html`)) {
+        langs.add(lang);
+        try {
+          dicts[lang] = (await fetchJson(`${RAW}/${p.id}/main/data/i18n/${lang}.json`)).strings || {};
+        } catch {
+          dicts[lang] = {};
         }
       }
-      if (!(await headOk(`${RAW}/${p.id}/main/docs/en/index.html`))) langs.delete('en');
-    } else {
-      langs.delete('en'); // fsp has no locale tree yet — its root is the real page
     }
+    if (!(await headOk(`${RAW}/${p.id}/main/docs/en/index.html`))) langs.delete('en');
     const events = p.id === 'fsp' ? adaptFsp(data) : adaptStandard(data, p.id);
     loaded.push({ p, events, langs, dicts });
     console.log(`${p.id}: ${events.length} events${langs.size ? ` (locales: ${[...langs].sort().join(',')})` : ''}`);
@@ -501,9 +498,12 @@ async function main() {
         // Deep-link into the project's own locale tree where it exists; the
         // bare /<id>/ root stub drops the URL hash, so never link it with one
         // unless the project has no locale tree at all (then the root IS the
-        // real page and the hash works).
-        if (p.id !== 'fsp') {
-          const best = langs.has(lang) ? lang : langs.has('en') ? 'en' : null;
+        // real page and the hash works). Events with a `sub` path (fsp's
+        // meeting pages) deep-link that file inside the locale tree instead.
+        const best = langs.has(lang) ? lang : langs.has('en') ? 'en' : null;
+        if (ev.sub) {
+          out.link = best ? `${SITE}/${p.id}/${best}/${ev.sub}` : `${SITE}/${p.id}/${ev.sub}`;
+        } else {
           out.link = best ? `${SITE}/${p.id}/${best}/#chronology` : `${SITE}/${p.id}/#chronology`;
         }
         return out;
