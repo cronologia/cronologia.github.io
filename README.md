@@ -82,9 +82,10 @@ context.md       domain background for contributors
 ```
 
 The `fsp` project is the reference implementation — its Architecture Decision
-Records ([`fsp/docs/adrs/`](https://github.com/cronologia/fsp/tree/master/docs/adrs))
-explain *why* things are built this way. The younger projects mirror it;
-extracting the duplicated toolkit into a shared template is on the roadmap here.
+Records ([`fsp/docs/adrs/`](https://github.com/cronologia/fsp/tree/main/docs/adrs))
+explain *why* things are built this way. The younger projects mirror it via the
+shared template that now lives in [`core`](https://github.com/cronologia/core)
+(`template/`, adopted per project by the `adopt-template` skill).
 
 ## This repo: how the hub itself is built
 
