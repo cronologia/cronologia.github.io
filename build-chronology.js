@@ -43,6 +43,7 @@ const PROJECTS = [
   { id: 'grupopuebla', label: 'Grupo de Puebla', color: '#c2410c', dark: '#8a2d08', file: 'data/chronology.json' },
   { id: 'tfp', label: 'TFP', color: '#713f12', dark: '#4a290b', file: 'data/chronology.json' },
   { id: 'rcc', label: 'RCC', color: '#be185d', dark: '#831244', file: 'data/chronology.json' },
+  { id: 'olavo', label: 'Olavo de Carvalho', color: '#7d5a1a', dark: '#4e3810', file: 'data/chronology.json' },
 ];
 
 const ANALYTICS = `  <!-- Google tag (gtag.js) -->
