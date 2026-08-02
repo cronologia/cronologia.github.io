@@ -72,7 +72,7 @@ function makeT(lang) {
   return t;
 }
 
-// The three groups and nine cards. Structure (order, colors, hrefs, years)
+// The four groups and ten cards. Structure (order, colors, hrefs, years)
 // lives here; every visible string routes through t().
 const GROUPS = [
   {
@@ -102,6 +102,13 @@ const GROUPS = [
       { id: 'perennialism', cls: 'p-peren', years: '1921–present', title: 'Perennialism', desc: "The Traditionalist School as a movement of ideas — Guénon's corpus, the journals, Evola's political adaptation and its receptions, and the academic institutionalization of the perennial philosophy." },
     ],
   },
+  {
+    heading: 'Intellectual biographies',
+    desc: 'Chronologies of individual authors whose trajectories cross several of the other projects — documented as lives and works, with contested characterizations attributed, never adjudicated.',
+    cards: [
+      { id: 'olavo', cls: 'p-olavo', years: '1947–2022', title: 'Olavo de Carvalho', desc: 'Journalist, astrologer, self-taught philosopher and central reference of the Brazilian New Right — his life and works, and reception pages for the philosophers his 585-lecture course engaged most.' },
+    ],
+  },
 ];
 
 const PRINCIPLES = [
@@ -114,14 +121,14 @@ const PRINCIPLES = [
 
 const S = {
   title: 'Cronologia — source-referenced chronologies of contested subjects',
-  metaDesc: 'Open, source-referenced chronologies of contested subjects in Latin American political and religious history — nine projects covering movements and institutions of the Catholic Church, the Latin American left, and the Traditionalist School. Every fact cited to a public source.',
+  metaDesc: 'Open, source-referenced chronologies of contested subjects in Latin American political and religious history — ten projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, and the intellectuals between them. Every fact cited to a public source.',
   subtitle: 'Source-referenced chronologies of contested subjects',
   lead: 'Timelines of organizations and movements in Latin American political and religious history — every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
   masterStrong: '⏳ Master chronology →',
   masterSpan: 'All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.',
   glossaryStrong: '📖 Shared glossary →',
   glossarySpan: 'Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.',
-  groupingStrong: 'Nine chronologies, grouped by subject area.',
+  groupingStrong: 'Ten chronologies, grouped by subject area.',
   groupingNote: 'The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.',
   howHeading: 'How these sites work',
   nextHeading: "What's next",
@@ -222,6 +229,7 @@ ${ANALYTICS}
       --puebla: #c2410c; --puebla-dark: #8a2d08;
       --tfp: #713f12; --tfp-dark: #4a290b;
       --rcc: #be185d; --rcc-dark: #831244;
+      --olavo: #7d5a1a; --olavo-dark: #4e3810;
       --ref: #4b5563;
     }
     * { box-sizing: border-box; }
@@ -258,6 +266,7 @@ ${ANALYTICS}
     .p-puebla { border-top-color: var(--puebla); } .p-puebla .years, .p-puebla h3 { color: var(--puebla-dark); }
     .p-tfp { border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
     .p-rcc { border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
+    .p-olavo { border-top-color: var(--olavo); } .p-olavo .years, .p-olavo h3 { color: var(--olavo-dark); }
     .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
     .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
     .principles strong { display: block; margin-bottom: .2rem; }
