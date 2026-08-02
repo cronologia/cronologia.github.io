@@ -1,3 +1,13 @@
 User-agent: *
 Allow: /
 Sitemap: https://cronologia.github.io/sitemap.xml
+Sitemap: https://cronologia.github.io/fsspx/sitemap.xml
+Sitemap: https://cronologia.github.io/tfp/sitemap.xml
+Sitemap: https://cronologia.github.io/rcc/sitemap.xml
+Sitemap: https://cronologia.github.io/tl/sitemap.xml
+Sitemap: https://cronologia.github.io/celam/sitemap.xml
+Sitemap: https://cronologia.github.io/fsp/sitemap.xml
+Sitemap: https://cronologia.github.io/grupopuebla/sitemap.xml
+Sitemap: https://cronologia.github.io/tariqa/sitemap.xml
+Sitemap: https://cronologia.github.io/perennialism/sitemap.xml
+Sitemap: https://cronologia.github.io/olavo/sitemap.xml
