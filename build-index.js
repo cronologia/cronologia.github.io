@@ -385,7 +385,10 @@ async function main() {
   fs.mkdirSync(path.join(__dirname, 'chronology'), { recursive: true });
   fs.writeFileSync(path.join(__dirname, 'chronology', 'index.html'), renderStub('chronology/', 'Master chronology — Cronologia'));
   fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), renderSitemap());
-  fs.writeFileSync(path.join(__dirname, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
+  // Project sites live under this apex domain but cannot serve the root
+  // robots.txt themselves, so their sitemaps are declared here (#17).
+  const projectSitemaps = GROUPS.flatMap((g) => g.cards.map((c) => `Sitemap: ${SITE}/${c.id}/sitemap.xml`));
+  fs.writeFileSync(path.join(__dirname, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n${projectSitemaps.join('\n')}\n`);
   console.log(`Wrote {${LOCALES.join(',')}}/index.html, index.html (stub), sitemap.xml, robots.txt (stats: ${stats.events} events, ${stats.projects} projects).`);
 }
 

@@ -7,14 +7,12 @@
   },
   "strings": {
     "Cronologia — source-referenced chronologies of contested subjects": "Cronologia — cronologias de temas controversos referenciadas a fontes",
-    "Open, source-referenced chronologies of contested subjects in Latin American political and religious history — nine projects covering movements and institutions of the Catholic Church, the Latin American left, and the Traditionalist School. Every fact cited to a public source.": "Cronologias abertas, referenciadas a fontes, de temas controversos da história política e religiosa da América Latina — nove projetos cobrindo movimentos e instituições da Igreja Católica, a esquerda latino-americana e a Escola Tradicionalista. Cada fato citado a uma fonte pública.",
     "Source-referenced chronologies of contested subjects": "Cronologias de temas controversos, referenciadas a fontes",
     "Timelines of organizations and movements in Latin American political and religious history — every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.": "Linhas do tempo de organizações e movimentos da história política e religiosa da América Latina — cada fato citado a uma fonte pública, cada data incerta sinalizada, cada afirmação controversa atribuída a seu autor. Em terreno disputado, uma linha do tempo verificável é mais útil do que mais uma opinião.",
     "⏳ Master chronology →": "⏳ Cronologia geral →",
     "All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.": "Todos os {events} eventos dos {projects} projetos em uma única linha do tempo filtrável — veja as interseções lado a lado.",
     "📖 Shared glossary →": "📖 Glossário compartilhado →",
     "Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.": "Definições citadas dos termos recorrentes, uma página por termo, para que cada cronologia aponte para a mesma explicação estável em vez de redefini-la.",
-    "Nine chronologies, grouped by subject area.": "Nove cronologias, agrupadas por área temática.",
     "The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.": "Os grupos abaixo são um auxílio de navegação, não uma afirmação sobre os temas. Projetos listados juntos não estão, por isso, sendo afirmados como partilhando um programa, uma aliança, uma origem ou uma identidade — vários deles se opõem uns aos outros, e os datasets documentam isso com fontes. Cada cronologia se sustenta por si só.",
     "The Catholic Church": "A Igreja Católica",
     "Movements, institutions and disputes inside the Catholic Church — traditionalist opposition, charismatic renewal, liberation theology, and the Latin American episcopate they all argue about. Grouped by the institution whose history they belong to, not by any shared position within it.": "Movimentos, instituições e disputas dentro da Igreja Católica — a oposição tradicionalista, a renovação carismática, a teologia da libertação e o episcopado latino-americano sobre o qual todos discutem. Agrupados pela instituição a cuja história pertencem, não por qualquer posição compartilhada dentro dela.",
@@ -85,6 +83,13 @@
     "date not fully verified — see the project page": "data não totalmente verificada — veja a página do projeto",
     "event": "evento",
     "events": "eventos",
-    "Generated {date} from the projects' public datasets — every event carries its citations on its project page.": "Gerado em {date} a partir dos datasets públicos dos projetos — cada evento leva suas citações na página do seu projeto."
+    "Generated {date} from the projects' public datasets — every event carries its citations on its project page.": "Gerado em {date} a partir dos datasets públicos dos projetos — cada evento leva suas citações na página do seu projeto.",
+    "1947–2022": "1947–2022",
+    "Olavo de Carvalho": "Olavo de Carvalho",
+    "Journalist, astrologer, self-taught philosopher and central reference of the Brazilian New Right — his life and works, and reception pages for the philosophers his 585-lecture course engaged most.": "Jornalista, astrólogo, filósofo autodidata e referência central da Nova Direita brasileira — sua vida e obra, e páginas de recepção para os filósofos que seu curso de 585 aulas mais abordou.",
+    "Intellectual biographies": "Biografias intelectuais",
+    "Chronologies of individual authors whose trajectories cross several of the other projects — documented as lives and works, with contested characterizations attributed, never adjudicated.": "Cronologias de autores individuais cujas trajetórias cruzam vários dos demais projetos — documentadas como vidas e obras, com as caracterizações controversas atribuídas, nunca adjudicadas.",
+    "Open, source-referenced chronologies of contested subjects in Latin American political and religious history — ten projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, and the intellectuals between them. Every fact cited to a public source.": "Cronologias abertas, referenciadas a fontes, de temas controversos da história política e religiosa da América Latina — dez projetos cobrindo movimentos e instituições da Igreja Católica, a esquerda latino-americana, a Escola Tradicionalista e os intelectuais entre eles. Cada fato citado a uma fonte pública.",
+    "Ten chronologies, grouped by subject area.": "Dez cronologias, agrupadas por área temática."
   }
 }
