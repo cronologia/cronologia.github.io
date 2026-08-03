@@ -99,7 +99,7 @@ const GROUPS = [
     desc: "The Traditionalist School of René Guénon and Frithjof Schuon — a twentieth-century current of ideas about a perennial philosophy, and the initiatic order that grew out of it. These are chronologies of that school's own history, not of the religious traditions its authors wrote about.",
     cards: [
       { id: 'tariqa', cls: 'p-tariqa', years: '1886–present', title: 'Tariqa Maryamiyya', desc: 'The Sufi order of Frithjof Schuon and the Traditionalist School (Guénon–Schuon perennialism) — and its documented connections to Catholic traditionalism and to Brazil.' },
-      { id: 'perennialism', cls: 'p-peren', years: '1921–present', title: 'Perennialism', desc: "The Traditionalist School as a movement of ideas — Guénon's corpus, the journals, Evola's political adaptation and its receptions, and the academic institutionalization of the perennial philosophy." },
+      { id: 'perennialism', cls: 'p-peren', years: '1540–present', title: 'Perennialism', desc: "The Traditionalist School as a movement of ideas — Guénon's corpus, the journals, Evola's political adaptation and its receptions, and the academic institutionalization of the perennial philosophy." },
     ],
   },
   {
