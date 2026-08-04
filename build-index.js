@@ -106,7 +106,7 @@ const GROUPS = [
     heading: 'Intellectual biographies',
     desc: 'Chronologies of individual authors whose trajectories cross several of the other projects — documented as lives and works, with contested characterizations attributed, never adjudicated.',
     cards: [
-      { id: 'olavo', cls: 'p-olavo', years: '1947–2022', title: 'Olavo de Carvalho', desc: 'Journalist, astrologer, self-taught philosopher and central reference of the Brazilian New Right — his life and works, and reception pages for the philosophers his 585-lecture course engaged most.' },
+      { id: 'olavo', cls: 'p-olavo', years: '1947–2022', title: 'Olavo de Carvalho', desc: 'Self-taught philosopher, polemicist and central reference of the Brazilian New Right, earlier a journalist — his life and works, and reception pages for the philosophers his 585-lecture course engaged most.' },
     ],
   },
 ];
