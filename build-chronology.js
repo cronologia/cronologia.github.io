@@ -44,6 +44,14 @@ const PROJECTS = [
   { id: 'tfp', label: 'TFP', color: '#713f12', dark: '#4a290b', file: 'data/chronology.json' },
   { id: 'rcc', label: 'RCC', color: '#be185d', dark: '#831244', file: 'data/chronology.json' },
   { id: 'olavo', label: 'Olavo de Carvalho', color: '#7d5a1a', dark: '#4e3810', file: 'data/chronology.json' },
+  { id: 'guadalupe', label: 'Guadalupe', color: '#9c3848', dark: '#6e2733', file: 'data/chronology.json' },
+  { id: 'gracas', label: 'Medalha Milagrosa', color: '#1f7a72', dark: '#14524c', file: 'data/chronology.json' },
+  { id: 'lasalette', label: 'La Salette', color: '#a35b2c', dark: '#713e1d', file: 'data/chronology.json' },
+  { id: 'lourdes', label: 'Lourdes', color: '#2f7d4f', dark: '#1e5434', file: 'data/chronology.json' },
+  { id: 'fatima', label: 'Fátima', color: '#2f4f9e', dark: '#1f346b', file: 'data/chronology.json' },
+  { id: 'lagrimas', label: 'Nossa Senhora das Lágrimas', color: '#2e6f8e', dark: '#1e4a60', file: 'data/chronology.json' },
+  { id: 'cimbres', label: 'Cimbres', color: '#6b4f8e', dark: '#4a3663', file: 'data/chronology.json' },
+  { id: 'santos', label: 'Santos', color: '#8a6a16', dark: '#5c460e', file: 'data/chronology.json' },
 ];
 
 const ANALYTICS = `  <!-- Google tag (gtag.js) -->
@@ -55,20 +63,66 @@ const ANALYTICS = `  <!-- Google tag (gtag.js) -->
     gtag('config', 'G-R9LV1QZHVE');
   </script>`;
 
+/**
+ * Which translation disclaimer a locale gets, decided by the dictionary's OWN
+ * `_meta` rather than asserted.
+ *
+ * This used to be hardcoded to "machine translation" in both generators. It was
+ * never true: these dictionaries are authored (see `_meta.generatedBy`), and the
+ * hub has no translation backend at all. The same defect was fixed in the
+ * project template (cronologia/core#66, #69) and did not reach here, because the
+ * hub has its own minimal generators rather than the template's build.js.
+ *
+ * Three honest states; the page states whichever holds:
+ *   reviewed  — `_meta.humanReviewed === true`
+ *   machine   — `_meta.generatedBy` begins with a named translation script
+ *   authored  — anything else: written by hand or by an assistant, unreviewed
+ *
+ * `authored` is the default deliberately. Claiming machine translation over
+ * authored prose invites a reader to discount text somebody stands behind, and
+ * on a site whose whole argument is that provenance is tracked, the one string
+ * every non-English reader sees should not be the false one.
+ */
+function disclaimerFor(lang) {
+  if (lang === 'en') return '';
+  const set = DISCLAIMERS[lang];
+  if (!set) return '';
+  let meta = {};
+  try {
+    meta = JSON.parse(fs.readFileSync(path.join(__dirname, 'i18n', `${lang}.json`), 'utf8'))._meta || {};
+  } catch { /* no cache: fall through to authored */ }
+  if (meta.humanReviewed === true) return set.reviewed;
+  if (typeof meta.generatedBy === 'string' && /^scripts\/translate\.js\b/.test(meta.generatedBy.trim())) return set.machine;
+  return set.authored;
+}
+
+const DISCLAIMERS = {
+  es: {
+    machine: '\u{1F310} Traducci\u00f3n autom\u00e1tica del ingl\u00e9s; la p\u00e1gina en ingl\u00e9s es la versi\u00f3n de referencia.',
+    authored: '\u{1F310} Traducci\u00f3n del ingl\u00e9s escrita por el asistente, sin revisi\u00f3n humana; la p\u00e1gina en ingl\u00e9s es la versi\u00f3n de referencia.',
+    reviewed: '\u{1F310} Traducci\u00f3n del ingl\u00e9s revisada por una persona; la p\u00e1gina en ingl\u00e9s es la versi\u00f3n de referencia.',
+  },
+  pt: {
+    machine: '\u{1F310} Tradu\u00e7\u00e3o autom\u00e1tica do ingl\u00eas; a p\u00e1gina em ingl\u00eas \u00e9 a vers\u00e3o de refer\u00eancia.',
+    authored: '\u{1F310} Tradu\u00e7\u00e3o do ingl\u00eas escrita pelo assistente, sem revis\u00e3o humana; a p\u00e1gina em ingl\u00eas \u00e9 a vers\u00e3o de refer\u00eancia.',
+    reviewed: '\u{1F310} Tradu\u00e7\u00e3o do ingl\u00eas revista por uma pessoa; a p\u00e1gina em ingl\u00eas \u00e9 a vers\u00e3o de refer\u00eancia.',
+  },
+};
+
 const esc = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const NUMBER_WORDS = {
-  en: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'],
-  es: ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce'],
-  pt: ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze'],
+  en: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'],
+  es: ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte'],
+  pt: ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'catorze', 'quinze', 'dezasseis', 'dezassete', 'dezoito', 'dezanove', 'vinte'],
 };
 const numberWord = (lang, n) => (NUMBER_WORDS[lang] || NUMBER_WORDS.en)[n] || String(n);
 
 // UI strings (English is authoritative; es/pt come from i18n/*.json).
 const S = {
   titleTag: 'Master chronology — Cronologia',
-  metaDesc: 'Every event of the Cronologia family on one timeline: {projects} source-referenced chronologies of Latin American political and religious history, merged and filterable by project.',
+  metaDesc: 'Every event of the Cronologia family on one timeline: {projects} source-referenced chronologies of political and religious history, merged and filterable by project.',
   home: '← Cronologia',
   h1: 'Master chronology',
   headerLead: 'All {events} events of the {projects} project chronologies on one timeline — filter by project, click any event for the full cited entry on its project site. Intersections the projects document separately become visible side by side here.',
@@ -89,7 +143,6 @@ const S = {
   eventMany: 'events',
   footer: "Generated {date} from the projects' public datasets — every event carries its citations on its project page.",
   langLabel: 'Language',
-  disclaimer: { es: '🌐 Traducción automática del inglés; la página en inglés es la versión de referencia.', pt: '🌐 Tradução automática do inglês; a página em inglês é a versão de referência.' },
 };
 
 function loadDict(lang) {
@@ -293,7 +346,8 @@ function renderPage(lang, t, events, counts, matrix, generatedAt) {
   const nWord = numberWord(lang, PROJECTS.length);
   const headerLead = t(S.headerLead).replace('{events}', String(total)).replace('{projects}', nWord);
   const metaDesc = t(S.metaDesc).replace('{projects}', nWord);
-  const disclaimer = lang === 'en' ? '' : `\n  <div class="i18n-disclaimer" role="note">${S.disclaimer[lang]}</div>`;
+  const disclaimerText = disclaimerFor(lang);
+  const disclaimer = disclaimerText ? `\n  <div class="i18n-disclaimer" role="note">${disclaimerText}</div>` : '';
   const alt = LOCALES.map((l) => `  <link rel="alternate" hreflang="${l}" href="${SITE}/${l}/chronology/">`).join('\n');
 
   return `<!DOCTYPE html>

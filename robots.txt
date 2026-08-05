@@ -10,4 +10,12 @@ Sitemap: https://cronologia.github.io/fsp/sitemap.xml
 Sitemap: https://cronologia.github.io/grupopuebla/sitemap.xml
 Sitemap: https://cronologia.github.io/tariqa/sitemap.xml
 Sitemap: https://cronologia.github.io/perennialism/sitemap.xml
+Sitemap: https://cronologia.github.io/guadalupe/sitemap.xml
+Sitemap: https://cronologia.github.io/gracas/sitemap.xml
+Sitemap: https://cronologia.github.io/lasalette/sitemap.xml
+Sitemap: https://cronologia.github.io/lourdes/sitemap.xml
+Sitemap: https://cronologia.github.io/fatima/sitemap.xml
+Sitemap: https://cronologia.github.io/lagrimas/sitemap.xml
+Sitemap: https://cronologia.github.io/cimbres/sitemap.xml
+Sitemap: https://cronologia.github.io/santos/sitemap.xml
 Sitemap: https://cronologia.github.io/olavo/sitemap.xml
