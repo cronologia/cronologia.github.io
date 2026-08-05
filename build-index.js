@@ -43,13 +43,59 @@ const ANALYTICS = `  <!-- Google tag (gtag.js) -->
     gtag('config', 'G-R9LV1QZHVE');
   </script>`;
 
+/**
+ * Which translation disclaimer a locale gets, decided by the dictionary's OWN
+ * `_meta` rather than asserted.
+ *
+ * This used to be hardcoded to "machine translation" in both generators. It was
+ * never true: these dictionaries are authored (see `_meta.generatedBy`), and the
+ * hub has no translation backend at all. The same defect was fixed in the
+ * project template (cronologia/core#66, #69) and did not reach here, because the
+ * hub has its own minimal generators rather than the template's build.js.
+ *
+ * Three honest states; the page states whichever holds:
+ *   reviewed  — `_meta.humanReviewed === true`
+ *   machine   — `_meta.generatedBy` begins with a named translation script
+ *   authored  — anything else: written by hand or by an assistant, unreviewed
+ *
+ * `authored` is the default deliberately. Claiming machine translation over
+ * authored prose invites a reader to discount text somebody stands behind, and
+ * on a site whose whole argument is that provenance is tracked, the one string
+ * every non-English reader sees should not be the false one.
+ */
+function disclaimerFor(lang) {
+  if (lang === 'en') return '';
+  const set = DISCLAIMERS[lang];
+  if (!set) return '';
+  let meta = {};
+  try {
+    meta = JSON.parse(fs.readFileSync(path.join(__dirname, 'i18n', `${lang}.json`), 'utf8'))._meta || {};
+  } catch { /* no cache: fall through to authored */ }
+  if (meta.humanReviewed === true) return set.reviewed;
+  if (typeof meta.generatedBy === 'string' && /^scripts\/translate\.js\b/.test(meta.generatedBy.trim())) return set.machine;
+  return set.authored;
+}
+
+const DISCLAIMERS = {
+  es: {
+    machine: '\u{1F310} Traducci\u00f3n autom\u00e1tica del ingl\u00e9s; la p\u00e1gina en ingl\u00e9s es la versi\u00f3n de referencia.',
+    authored: '\u{1F310} Traducci\u00f3n del ingl\u00e9s escrita por el asistente, sin revisi\u00f3n humana; la p\u00e1gina en ingl\u00e9s es la versi\u00f3n de referencia.',
+    reviewed: '\u{1F310} Traducci\u00f3n del ingl\u00e9s revisada por una persona; la p\u00e1gina en ingl\u00e9s es la versi\u00f3n de referencia.',
+  },
+  pt: {
+    machine: '\u{1F310} Tradu\u00e7\u00e3o autom\u00e1tica do ingl\u00eas; a p\u00e1gina em ingl\u00eas \u00e9 a vers\u00e3o de refer\u00eancia.',
+    authored: '\u{1F310} Tradu\u00e7\u00e3o do ingl\u00eas escrita pelo assistente, sem revis\u00e3o humana; a p\u00e1gina em ingl\u00eas \u00e9 a vers\u00e3o de refer\u00eancia.',
+    reviewed: '\u{1F310} Tradu\u00e7\u00e3o do ingl\u00eas revista por uma pessoa; a p\u00e1gina em ingl\u00eas \u00e9 a vers\u00e3o de refer\u00eancia.',
+  },
+};
+
 const esc = (s) =>
   String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 const NUMBER_WORDS = {
-  en: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'],
-  es: ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce'],
-  pt: ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze'],
+  en: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'],
+  es: ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte'],
+  pt: ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'catorze', 'quinze', 'dezasseis', 'dezassete', 'dezoito', 'dezanove', 'vinte'],
 };
 const numberWord = (lang, n) => (NUMBER_WORDS[lang] || NUMBER_WORDS.en)[n] || String(n);
 
@@ -103,6 +149,20 @@ const GROUPS = [
     ],
   },
   {
+    heading: 'Marian apparitions and the Church\'s judgments',
+    desc: "Reported apparitions of the Virgin Mary, and what Church authority actually did about each one. These chronologies record two different kinds of thing and never confuse them: who reported what and when, and which bishop or dicastery ruled and when, citing the act. They do not assert that any apparition took place. Each carries a chart of how far its case got \u2014 local inquiry, the bishop's judgment, referral to Rome \u2014 in which \u201cno ruling found\u201d is kept distinct from \u201cruled against\u201d and from \u201cnever went there\u201d.",
+    cards: [
+      { id: 'guadalupe', cls: 'p-guadalupe', years: '1521\u20132025', title: 'Nossa Senhora de Guadalupe', desc: 'The Tepeyac account of 1531 and the documentary record behind it \u2014 Nican Mopohua, the 1556 Bustamante controversy, the 1666 Informaciones \u2014 with the historicity dispute carried as a live disagreement between named scholars, not settled.' },
+      { id: 'gracas', cls: 'p-gracas', years: '1806\u20131947', title: 'Nossa Senhora das Gra\u00e7as \u2014 Medalha Milagrosa', desc: 'The 1830 Rue du Bac reports and the medal struck from them \u2014 with the attestation chain made explicit: Catherine Labour\u00e9 stayed publicly anonymous for life, and the account reached the Church through her confessor.' },
+      { id: 'lasalette', cls: 'p-lasalette', years: '1826\u20132016', title: 'Nossa Senhora de La Salette', desc: 'The 1846 Alpine apparition, approved by the bishop of Grenoble in 1851 \u2014 and the separate Holy Office condemnations of M\u00e9lanie\'s expanded \u201csecrets\u201d in 1915 and 1923, kept apart from it because they judge a different object.' },
+      { id: 'lourdes', cls: 'p-lourdes', years: '1854\u20132024', title: 'Nossa Senhora de Lourdes', desc: 'The 1858 grotto reports, Bishop Laurence\'s 1862 decree, and the Medical Bureau \u2014 where the datable events are the bishops\u2019 recognition acts for individual cures, and the cure counts are attributed to the Sanctuary that keeps them.' },
+      { id: 'fatima', cls: 'p-fatima', years: '1881\u20132017', title: 'Nossa Senhora de F\u00e1tima', desc: 'The 1917 Cova da Iria reports and the 1930 pastoral letter that judged them \u2014 with the anticlerical First Republic before, the memoirs that attest much of it retrospectively, and the Roman acts named for what each actually is.' },
+      { id: 'lagrimas', cls: 'p-lagrimas', years: '1901\u20132023', title: 'Nossa Senhora das L\u00e1grimas', desc: 'The apparitions reported to Am\u00e1lia Aguirre in Campinas around 1929\u201330 \u2014 where no Church judgment on the apparitions has been located, and the recognitions devotional literature reports are recorded as reported, without the documents.' },
+      { id: 'cimbres', cls: 'p-cimbres', years: '1676\u20132026', title: 'Nossa Senhora das Gra\u00e7as de Cimbres', desc: 'The 1936 reports at Cimbres, in Xukuru territory in Pernambuco \u2014 no diocesan ruling from the period has been found, and the diocese\u2019s own 2021 pastoral letter calls itself the Church\u2019s first response.' },
+      { id: 'santos', cls: 'p-santos', years: '1531\u20132017', title: 'Santos', desc: 'The canonization paths of the seers themselves \u2014 Juan Diego, Catherine Labour\u00e9, Bernadette Soubirous, Francisco and Jacinta Marto \u2014 recorded as dated Church judgments about persons, which is not the same as authenticating an apparition.' },
+    ],
+  },
+  {
     heading: 'Intellectual biographies',
     desc: 'Chronologies of individual authors whose trajectories cross several of the other projects — documented as lives and works, with contested characterizations attributed, never adjudicated.',
     cards: [
@@ -121,14 +181,14 @@ const PRINCIPLES = [
 
 const S = {
   title: 'Cronologia — source-referenced chronologies of contested subjects',
-  metaDesc: 'Open, source-referenced chronologies of contested subjects in Latin American political and religious history — ten projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, and the intellectuals between them. Every fact cited to a public source.',
+  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — eighteen projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
   subtitle: 'Source-referenced chronologies of contested subjects',
-  lead: 'Timelines of organizations and movements in Latin American political and religious history — every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
+  lead: 'Timelines of organizations, movements and reported events in political and religious history — centred on Latin America, and following subjects beyond it where their story goes. Every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
   masterStrong: '⏳ Master chronology →',
   masterSpan: 'All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.',
   glossaryStrong: '📖 Shared glossary →',
   glossarySpan: 'Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.',
-  groupingStrong: 'Ten chronologies, grouped by subject area.',
+  groupingStrong: 'Eighteen chronologies, grouped by subject area.',
   groupingNote: 'The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.',
   howHeading: 'How these sites work',
   nextHeading: "What's next",
@@ -136,7 +196,6 @@ const S = {
   roadmapLink: 'portal repository',
   footer: "Cronologia — open data on {gh}. MIT licensed. Each chronology's dataset lives in its own public repository.",
   langLabel: 'Language',
-  disclaimer: { es: '🌐 Traducción automática del inglés; la página en inglés es la versión de referencia.', pt: '🌐 Tradução automática do inglês; a página em inglês é a versão de referência.' },
 };
 
 // A project that has shipped a locale serves real pages at /<id>/<lang>/;
@@ -176,7 +235,8 @@ function renderLanding(lang, stats, locales, t) {
   const masterSpan = t(S.masterSpan)
     .replace('{events}', String(stats.events))
     .replace('{projects}', numberWord(lang, stats.projects));
-  const disclaimer = lang === 'en' ? '' : `\n  <div class="i18n-disclaimer" role="note">${S.disclaimer[lang]}</div>`;
+  const disclaimerText = disclaimerFor(lang);
+  const disclaimer = disclaimerText ? `\n  <div class="i18n-disclaimer" role="note">${disclaimerText}</div>` : '';
 
   const groups = GROUPS.map((g) => {
     const cards = g.cards.map((c) => `        <a class="project ${c.cls}" href="${projectHref(c.id, lang, locales)}">
@@ -230,6 +290,14 @@ ${ANALYTICS}
       --tfp: #713f12; --tfp-dark: #4a290b;
       --rcc: #be185d; --rcc-dark: #831244;
       --olavo: #7d5a1a; --olavo-dark: #4e3810;
+      --guadalupe: #9c3848; --guadalupe-dark: #6e2733;
+      --gracas: #1f7a72; --gracas-dark: #14524c;
+      --lasalette: #a35b2c; --lasalette-dark: #713e1d;
+      --lourdes: #2f7d4f; --lourdes-dark: #1e5434;
+      --fatima: #2f4f9e; --fatima-dark: #1f346b;
+      --lagrimas: #2e6f8e; --lagrimas-dark: #1e4a60;
+      --cimbres: #6b4f8e; --cimbres-dark: #4a3663;
+      --santos: #8a6a16; --santos-dark: #5c460e;
       --ref: #4b5563;
     }
     * { box-sizing: border-box; }
@@ -267,6 +335,14 @@ ${ANALYTICS}
     .p-tfp { border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
     .p-rcc { border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
     .p-olavo { border-top-color: var(--olavo); } .p-olavo .years, .p-olavo h3 { color: var(--olavo-dark); }
+    .p-guadalupe { border-top-color: var(--guadalupe); } .p-guadalupe .years, .p-guadalupe h3 { color: var(--guadalupe-dark); }
+    .p-gracas { border-top-color: var(--gracas); } .p-gracas .years, .p-gracas h3 { color: var(--gracas-dark); }
+    .p-lasalette { border-top-color: var(--lasalette); } .p-lasalette .years, .p-lasalette h3 { color: var(--lasalette-dark); }
+    .p-lourdes { border-top-color: var(--lourdes); } .p-lourdes .years, .p-lourdes h3 { color: var(--lourdes-dark); }
+    .p-fatima { border-top-color: var(--fatima); } .p-fatima .years, .p-fatima h3 { color: var(--fatima-dark); }
+    .p-lagrimas { border-top-color: var(--lagrimas); } .p-lagrimas .years, .p-lagrimas h3 { color: var(--lagrimas-dark); }
+    .p-cimbres { border-top-color: var(--cimbres); } .p-cimbres .years, .p-cimbres h3 { color: var(--cimbres-dark); }
+    .p-santos { border-top-color: var(--santos); } .p-santos .years, .p-santos h3 { color: var(--santos-dark); }
     .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
     .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
     .principles strong { display: block; margin-bottom: .2rem; }
