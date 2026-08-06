@@ -36,7 +36,7 @@ const LOCALES = ['en', 'es', 'pt'];
 const PROJECTS = [
   { id: 'fsp', label: 'Foro de São Paulo', color: '#b8252b', dark: '#7a1418', file: 'data/forum.json' },
   { id: 'fsspx', label: 'FSSPX', color: '#1e4f8f', dark: '#12365f', file: 'data/chronology.json' },
-  { id: 'tl', label: 'Teologia da Libertação', color: '#1b7a3d', dark: '#114f27', file: 'data/chronology.json' },
+  { id: 'tl', label: 'Liberation Theology', color: '#1b7a3d', dark: '#114f27', file: 'data/chronology.json' },
   { id: 'tariqa', label: 'Tariqa Maryamiyya', color: '#0e7490', dark: '#0a4e60', file: 'data/chronology.json' },
   { id: 'perennialism', label: 'Perennialism', color: '#5b21b6', dark: '#3b1580', file: 'data/chronology.json' },
   { id: 'celam', label: 'CELAM', color: '#831843', dark: '#5a0f2e', file: 'data/chronology.json' },
@@ -49,9 +49,9 @@ const PROJECTS = [
   { id: 'lasalette', label: 'La Salette', color: '#a35b2c', dark: '#713e1d', file: 'data/chronology.json' },
   { id: 'lourdes', label: 'Lourdes', color: '#2f7d4f', dark: '#1e5434', file: 'data/chronology.json' },
   { id: 'fatima', label: 'Fátima', color: '#2f4f9e', dark: '#1f346b', file: 'data/chronology.json' },
-  { id: 'lagrimas', label: 'Nossa Senhora das Lágrimas', color: '#2e6f8e', dark: '#1e4a60', file: 'data/chronology.json' },
+  { id: 'lagrimas', label: 'Our Lady of Tears', color: '#2e6f8e', dark: '#1e4a60', file: 'data/chronology.json' },
   { id: 'cimbres', label: 'Cimbres', color: '#6b4f8e', dark: '#4a3663', file: 'data/chronology.json' },
-  { id: 'santos', label: 'Santos', color: '#8a6a16', dark: '#5c460e', file: 'data/chronology.json' },
+  { id: 'santos', label: 'Saints', color: '#8a6a16', dark: '#5c460e', file: 'data/chronology.json' },
 ];
 
 const ANALYTICS = `  <!-- Google tag (gtag.js) -->
