@@ -26,7 +26,15 @@ The proven sequence (used for fsspx and tl):
    public references with exact URLs. Verify primary-source URLs resolve.
    Mark everything the sources disagree on.
 2. **Instantiate the template.** `tools/new-project.sh <dest> <accent colors>`
-   — pick a distinct accent per subject (fsp red, fsspx blue, tl green).
+   — pick a distinct accent per subject (fsp red, fsspx blue, tl green). This
+   also vendors the shared skills into `<dest>/.claude/skills/` and brings in a
+   `deploy.yml` carrying both drift checks. **Confirm both arrived**, with
+   `python3 tools/sync-skills.py <dest> --check` and a grep for
+   `sync-skills.py . --check` in the new `deploy.yml`; the eight repos of
+   2026-08-05 were bootstrapped before either happened, so ADR-0007's rules
+   never reached the apparition repos they were written for (core#85). A repo
+   with no vendored skills is not "clean" — it is outside the mechanism, and an
+   agent opening it gets no sourcing discipline at all.
 3. **Write the data.** `data/chronology.json`: `meta`, `facts[]`, `events[]`,
    `figures[]`, `organizations[]`, `disambiguation.items[]`, `references[]`.
    Every entry cited; uncertain dates flagged. Then `README.md`, `AGENTS.md`,
@@ -42,9 +50,12 @@ The proven sequence (used for fsspx and tl):
    chromium) and eyeball it.
 5. **Publish.** Create the GitHub repo EMPTY; push `main` as the first branch;
    only then enable Pages (Source: GitHub Actions) — the github-pages
-   environment pins its allowed branch to the default branch at enable time —
-   and set the Actions variable `ENABLE_PAGES=true`. The workflow deploys on
-   push to main and supports manual dispatch.
+   environment pins its allowed branch to the default branch at enable time.
+   That is the whole of it; there is no second switch. The workflow deploys on
+   push to main and supports manual dispatch. (There used to be an
+   `ENABLE_PAGES` Actions variable as well. It was removed: with Pages on and
+   the variable unset, runs reported success while the deploy silently skipped,
+   and eight repos shipped green checks over sites serving 404.)
 6. **Ticket the follow-up.** Open: a deep-investigation epic (every flagged
    date as a checkbox, subject-specific threads, porting the preservation
    pipeline), per-figure dossier tickets, and a project-chats ticket. Link the
