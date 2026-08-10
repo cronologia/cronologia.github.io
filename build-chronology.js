@@ -36,6 +36,7 @@ const LOCALES = ['en', 'es', 'pt'];
 const PROJECTS = [
   { id: 'fsp', label: 'Foro de São Paulo', color: '#b8252b', dark: '#7a1418', file: 'data/forum.json' },
   { id: 'fsspx', label: 'FSSPX', color: '#1e4f8f', dark: '#12365f', file: 'data/chronology.json' },
+  { id: 'kofc', label: 'Knights of Columbus', color: '#0b3d91', dark: '#072a66', file: 'data/chronology.json' },
   { id: 'tl', label: 'Liberation Theology', color: '#1b7a3d', dark: '#114f27', file: 'data/chronology.json' },
   { id: 'tariqa', label: 'Tariqa Maryamiyya', color: '#0e7490', dark: '#0a4e60', file: 'data/chronology.json' },
   { id: 'perennialism', label: 'Perennialism', color: '#5b21b6', dark: '#3b1580', file: 'data/chronology.json' },
