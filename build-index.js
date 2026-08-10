@@ -130,6 +130,7 @@ const GROUPS = [
       { id: 'rcc', cls: 'p-rcc', years: '1967–present', title: 'Catholic Charismatic Renewal', desc: "The Catholic Charismatic Renewal from the 1967 Duquesne Weekend to CHARIS — with the Brazilian movement: Rahm and Dougherty, Canção Nova, Shalom, the CNBB's 1994 guidelines and the media wave." },
       { id: 'tl', cls: 'p-tl', years: '1960s–present', title: 'Liberation Theology', desc: 'The Latin American theological movement — Medellín, Gutiérrez, the Vatican instructions, the martyrs and the later reception — with a map of where its story happened.' },
       { id: 'celam', cls: 'p-celam', years: '1955–present', title: 'CELAM', desc: "The Latin American bishops' council as an institution — the five General Conferences (Rio to Aparecida), the assemblies, presidencies and reforms; the interpretation wars live in the TL project." },
+      { id: 'kofc', cls: 'p-kofc', years: '1882–present', title: 'Knights of Columbus', desc: 'The Catholic fraternal benefit society founded in New Haven in 1882 by Bl. Michael McGivney — the Order’s growth and papal relations, and the documented conflict with organized anti-Catholicism in the United States: the fabricated “bogus oath”, the libel trials that answered it, and the Ku Klux Klan of the 1920s.' },
     ],
   },
   {
@@ -181,14 +182,14 @@ const PRINCIPLES = [
 
 const S = {
   title: 'Cronologia — source-referenced chronologies of contested subjects',
-  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — eighteen projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
+  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — nineteen projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
   subtitle: 'Source-referenced chronologies of contested subjects',
   lead: 'Timelines of organizations, movements and reported events in political and religious history — centred on Latin America, and following subjects beyond it where their story goes. Every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
   masterStrong: '⏳ Master chronology →',
   masterSpan: 'All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.',
   glossaryStrong: '📖 Shared glossary →',
   glossarySpan: 'Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.',
-  groupingStrong: 'Eighteen chronologies, grouped by subject area.',
+  groupingStrong: 'Nineteen chronologies, grouped by subject area.',
   groupingNote: 'The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.',
   howHeading: 'How these sites work',
   nextHeading: "What's next",
@@ -282,6 +283,7 @@ ${ANALYTICS}
       --line: #e4e0d8; --maxw: 920px;
       --fsp: #b8252b; --fsp-dark: #7a1418;
       --fsspx: #1e4f8f; --fsspx-dark: #12365f;
+      --kofc: #0b3d91; --kofc-dark: #072a66;
       --tl: #1b7a3d; --tl-dark: #114f27;
       --tariqa: #0e7490; --tariqa-dark: #0a4e60;
       --peren: #5b21b6; --peren-dark: #3b1580;
@@ -327,6 +329,7 @@ ${ANALYTICS}
     .project p { margin: .2rem 0 0; font-size: .9rem; color: var(--muted); }
     .p-fsp { border-top-color: var(--fsp); } .p-fsp .years, .p-fsp h3 { color: var(--fsp-dark); }
     .p-fsspx { border-top-color: var(--fsspx); } .p-fsspx .years, .p-fsspx h3 { color: var(--fsspx-dark); }
+    .p-kofc { border-top-color: var(--kofc); } .p-kofc .years, .p-kofc h3 { color: var(--kofc-dark); }
     .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
     .p-tariqa { border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
     .p-peren { border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }
