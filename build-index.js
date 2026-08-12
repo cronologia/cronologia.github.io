@@ -160,6 +160,8 @@ const GROUPS = [
       { id: 'fatima', cls: 'p-fatima', years: '1881\u20132017', title: 'Our Lady of Fátima', desc: 'The 1917 Cova da Iria reports and the 1930 pastoral letter that judged them \u2014 with the anticlerical First Republic before, the memoirs that attest much of it retrospectively, and the Roman acts named for what each actually is.' },
       { id: 'lagrimas', cls: 'p-lagrimas', years: '1901\u20132023', title: 'Our Lady of Tears', desc: 'The apparitions reported to Am\u00e1lia Aguirre in Campinas around 1929\u201330 \u2014 where no Church judgment on the apparitions has been located, and the recognitions devotional literature reports are recorded as reported, without the documents.' },
       { id: 'cimbres', cls: 'p-cimbres', years: '1676\u20132026', title: 'Our Lady of Grace of Cimbres', desc: 'The 1936 reports at Cimbres, in Xukuru territory in Pernambuco \u2014 no diocesan ruling from the period has been found, and the diocese\u2019s own 2021 pastoral letter calls itself the Church\u2019s first response.' },
+      { id: 'medjugorje', cls: 'p-medjugorje', years: '1981\u2013present', title: 'Medjugorje', desc: 'The apparitions reported since 1981 and every Church act about them \u2014 the 1991 Zadar \u201cnon constat\u201d, the delivered-but-unpublished Ruini report, and the 2024 nihil obstat whose own text says it does not declare the phenomenon supernatural.' },
+      { id: 'aparecida', cls: 'p-aparecida', years: '1717\u2013present', title: 'Nossa Senhora Aparecida', desc: 'The image found in the Para\u00edba do Sul in 1717 and the honours that followed \u2014 coronation, patronage of Brazil, the basilica \u2014 where the earliest account dates from 1757 and honours are recorded as honours, never as findings.' },
       { id: 'santos', cls: 'p-santos', years: '1531\u20132017', title: 'Saints', desc: 'The canonization paths of the seers themselves \u2014 Juan Diego, Catherine Labour\u00e9, Bernadette Soubirous, Francisco and Jacinta Marto \u2014 recorded as dated Church judgments about persons, which is not the same as authenticating an apparition.' },
     ],
   },
@@ -168,6 +170,7 @@ const GROUPS = [
     desc: 'Chronologies of individual authors whose trajectories cross several of the other projects — documented as lives and works, with contested characterizations attributed, never adjudicated.',
     cards: [
       { id: 'olavo', cls: 'p-olavo', years: '1947–2022', title: 'Olavo de Carvalho', desc: 'Self-taught philosopher, polemicist and central reference of the Brazilian New Right, earlier a journalist — his life and works, and reception pages for the philosophers his 585-lecture course engaged most.' },
+      { id: 'corcao', cls: 'p-corcao', years: '1896–1978', title: 'Gustavo Corção', desc: 'Brazil’s leading Catholic conservative columnist — the conversion, the rupture with Alceu Amoroso Lima, Permanência and the regime years — with the contested characterizations attributed on all sides, and no rupture asserted that the sources do not document.' },
     ],
   },
 ];
@@ -182,14 +185,14 @@ const PRINCIPLES = [
 
 const S = {
   title: 'Cronologia — source-referenced chronologies of contested subjects',
-  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — nineteen projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
+  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — twenty-two projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
   subtitle: 'Source-referenced chronologies of contested subjects',
   lead: 'Timelines of organizations, movements and reported events in political and religious history — centred on Latin America, and following subjects beyond it where their story goes. Every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
   masterStrong: '⏳ Master chronology →',
   masterSpan: 'All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.',
   glossaryStrong: '📖 Shared glossary →',
   glossarySpan: 'Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.',
-  groupingStrong: 'Nineteen chronologies, grouped by subject area.',
+  groupingStrong: 'Twenty-two chronologies, grouped by subject area.',
   groupingNote: 'The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.',
   howHeading: 'How these sites work',
   nextHeading: "What's next",
@@ -284,6 +287,9 @@ ${ANALYTICS}
       --fsp: #b8252b; --fsp-dark: #7a1418;
       --fsspx: #1e4f8f; --fsspx-dark: #12365f;
       --kofc: #0b3d91; --kofc-dark: #072a66;
+      --medjugorje: #536878; --medjugorje-dark: #39485a;
+      --aparecida: #1b2a5e; --aparecida-dark: #101b40;
+      --corcao: #6e1f2c; --corcao-dark: #47131c;
       --tl: #1b7a3d; --tl-dark: #114f27;
       --tariqa: #0e7490; --tariqa-dark: #0a4e60;
       --peren: #5b21b6; --peren-dark: #3b1580;
@@ -330,6 +336,9 @@ ${ANALYTICS}
     .p-fsp { border-top-color: var(--fsp); } .p-fsp .years, .p-fsp h3 { color: var(--fsp-dark); }
     .p-fsspx { border-top-color: var(--fsspx); } .p-fsspx .years, .p-fsspx h3 { color: var(--fsspx-dark); }
     .p-kofc { border-top-color: var(--kofc); } .p-kofc .years, .p-kofc h3 { color: var(--kofc-dark); }
+    .p-medjugorje { border-top-color: var(--medjugorje); } .p-medjugorje .years, .p-medjugorje h3 { color: var(--medjugorje-dark); }
+    .p-aparecida { border-top-color: var(--aparecida); } .p-aparecida .years, .p-aparecida h3 { color: var(--aparecida-dark); }
+    .p-corcao { border-top-color: var(--corcao); } .p-corcao .years, .p-corcao h3 { color: var(--corcao-dark); }
     .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
     .p-tariqa { border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
     .p-peren { border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }

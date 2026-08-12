@@ -18,5 +18,8 @@ Sitemap: https://cronologia.github.io/lourdes/sitemap.xml
 Sitemap: https://cronologia.github.io/fatima/sitemap.xml
 Sitemap: https://cronologia.github.io/lagrimas/sitemap.xml
 Sitemap: https://cronologia.github.io/cimbres/sitemap.xml
+Sitemap: https://cronologia.github.io/medjugorje/sitemap.xml
+Sitemap: https://cronologia.github.io/aparecida/sitemap.xml
 Sitemap: https://cronologia.github.io/santos/sitemap.xml
 Sitemap: https://cronologia.github.io/olavo/sitemap.xml
+Sitemap: https://cronologia.github.io/corcao/sitemap.xml

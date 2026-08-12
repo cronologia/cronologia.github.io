@@ -52,6 +52,9 @@ const PROJECTS = [
   { id: 'fatima', label: 'Fátima', color: '#2f4f9e', dark: '#1f346b', file: 'data/chronology.json' },
   { id: 'lagrimas', label: 'Our Lady of Tears', color: '#2e6f8e', dark: '#1e4a60', file: 'data/chronology.json' },
   { id: 'cimbres', label: 'Cimbres', color: '#6b4f8e', dark: '#4a3663', file: 'data/chronology.json' },
+  { id: 'medjugorje', label: 'Medjugorje', color: '#536878', dark: '#39485a', file: 'data/chronology.json' },
+  { id: 'aparecida', label: 'Aparecida', color: '#1b2a5e', dark: '#101b40', file: 'data/chronology.json' },
+  { id: 'corcao', label: 'Gustavo Corção', color: '#6e1f2c', dark: '#47131c', file: 'data/chronology.json' },
   { id: 'santos', label: 'Saints', color: '#8a6a16', dark: '#5c460e', file: 'data/chronology.json' },
 ];
 
