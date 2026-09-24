@@ -171,6 +171,7 @@ const GROUPS = [
     cards: [
       { id: 'olavo', cls: 'p-olavo', years: '1947–2022', title: 'Olavo de Carvalho', desc: 'Self-taught philosopher, polemicist and central reference of the Brazilian New Right, earlier a journalist — his life and works, and reception pages for the philosophers his 585-lecture course engaged most.' },
       { id: 'corcao', cls: 'p-corcao', years: '1896–1978', title: 'Gustavo Corção', desc: 'Brazil’s leading Catholic conservative columnist — the conversion, the rupture with Alceu Amoroso Lima, Permanência and the regime years — with the contested characterizations attributed on all sides, and no rupture asserted that the sources do not document.' },
+      { id: 'marioferreirasantos', cls: 'p-mfs', years: '1907–1968', title: 'Mário Ferreira dos Santos', desc: 'The self-published Brazilian philosopher of the Enciclopédia das Ciências Filosóficas — his life, the works whose very years the sources dispute, and a posthumous revival driven largely by one admirer, with every volume count attributed and none asserted.' },
     ],
   },
 ];
@@ -185,14 +186,14 @@ const PRINCIPLES = [
 
 const S = {
   title: 'Cronologia — source-referenced chronologies of contested subjects',
-  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — twenty-two projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
+  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — twenty-three projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
   subtitle: 'Source-referenced chronologies of contested subjects',
   lead: 'Timelines of organizations, movements and reported events in political and religious history — centred on Latin America, and following subjects beyond it where their story goes. Every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
   masterStrong: '⏳ Master chronology →',
   masterSpan: 'All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.',
   glossaryStrong: '📖 Shared glossary →',
   glossarySpan: 'Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.',
-  groupingStrong: 'Twenty-two chronologies, grouped by subject area.',
+  groupingStrong: 'Twenty-three chronologies, grouped by subject area.',
   groupingNote: 'The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.',
   howHeading: 'How these sites work',
   nextHeading: "What's next",
@@ -290,6 +291,7 @@ ${ANALYTICS}
       --medjugorje: #536878; --medjugorje-dark: #39485a;
       --aparecida: #1b2a5e; --aparecida-dark: #101b40;
       --corcao: #6e1f2c; --corcao-dark: #47131c;
+      --mfs: #7b2d5e; --mfs-dark: #521d3f;
       --tl: #1b7a3d; --tl-dark: #114f27;
       --tariqa: #0e7490; --tariqa-dark: #0a4e60;
       --peren: #5b21b6; --peren-dark: #3b1580;
@@ -339,6 +341,7 @@ ${ANALYTICS}
     .p-medjugorje { border-top-color: var(--medjugorje); } .p-medjugorje .years, .p-medjugorje h3 { color: var(--medjugorje-dark); }
     .p-aparecida { border-top-color: var(--aparecida); } .p-aparecida .years, .p-aparecida h3 { color: var(--aparecida-dark); }
     .p-corcao { border-top-color: var(--corcao); } .p-corcao .years, .p-corcao h3 { color: var(--corcao-dark); }
+    .p-mfs { border-top-color: var(--mfs); } .p-mfs .years, .p-mfs h3 { color: var(--mfs-dark); }
     .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
     .p-tariqa { border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
     .p-peren { border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }
