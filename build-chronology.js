@@ -57,6 +57,7 @@ const PROJECTS = [
   { id: 'corcao', label: 'Gustavo Corção', color: '#6e1f2c', dark: '#47131c', file: 'data/chronology.json' },
   { id: 'marioferreirasantos', label: 'Mário Ferreira dos Santos', color: '#7b2d5e', dark: '#521d3f', file: 'data/chronology.json' },
   { id: 'santos', label: 'Saints', color: '#8a6a16', dark: '#5c460e', file: 'data/chronology.json' },
+  { id: 'cristo', label: 'Jesus and the relics', color: '#4338a0', dark: '#2d2570', file: 'data/chronology.json' },
 ];
 
 const ANALYTICS = `  <!-- Google tag (gtag.js) -->
@@ -143,6 +144,9 @@ const S = {
   colProject: 'project',
   colTotal: 'total',
   before1900: 'Before 1900',
+  // Suffix for years before the common era: a negative year is that many
+  // years BCE (-4 is 4 BCE; there is no year 0), as in core#100.
+  bce: 'BCE',
   flagTitle: 'date not fully verified — see the project page',
   eventOne: 'event',
   eventMany: 'events',
@@ -213,7 +217,10 @@ const decadeOf = (year) => Math.floor(year / 10) * 10;
 // The card list groups everything before 1900 under one heading; grid cells
 // for pre-1900 decades link there.
 const decadeAnchor = (d) => (d < 1900 ? 'd-early' : `d${d}`);
-const decadeLabel = (d) => `${d}s`;
+// A negative year is BCE (core#100): -4 is 4 BCE, and bucket -10 holds the
+// years 10 BCE to 1 BCE. Common-era labels are unchanged.
+const yearText = (y, t) => (y > 0 ? String(y) : `${-y} ${t(S.bce)}`);
+const decadeLabel = (d, t) => (d >= 0 ? `${d}s` : `${-d}–${-(d + 9)} ${t(S.bce)}`);
 
 function buildMatrix(all, projects) {
   const perProject = new Map(projects.map((p) => [p.id, new Map()]));
@@ -262,8 +269,8 @@ function renderGrid({ columns, rows, max }, generatedAt, t) {
   const head = columns
     .map((c) =>
       c.break
-        ? `<th scope="col" class="col-break" title="${esc(t(S.gapNote).replace('{from}', c.from).replace('{to}', c.to))}">⋯</th>`
-        : `<th scope="col">${decadeLabel(c.decade)}</th>`
+        ? `<th scope="col" class="col-break" title="${esc(t(S.gapNote).replace('{from}', yearText(c.from, t)).replace('{to}', yearText(c.to, t)))}">⋯</th>`
+        : `<th scope="col">${decadeLabel(c.decade, t)}</th>`
     )
     .join('');
 
@@ -275,7 +282,7 @@ function renderGrid({ columns, rows, max }, generatedAt, t) {
           if (c.break) return '<td class="c gap" aria-hidden="true"></td>';
           if (!n) return '<td class="c c0"><span aria-hidden="true">·</span></td>';
           const ratio = n / max;
-          const say = `${p.label}, ${decadeLabel(c.decade)}: ${n} ${n === 1 ? t(S.eventOne) : t(S.eventMany)}`;
+          const say = `${p.label}, ${decadeLabel(c.decade, t)}: ${n} ${n === 1 ? t(S.eventOne) : t(S.eventMany)}`;
           return `<td class="c${ratio > 0.55 ? ' hi' : ''}" style="--i:${ratio.toFixed(2)}">` +
             `<a href="#${decadeAnchor(c.decade)}" data-project="${p.id}" data-say="${esc(say)}" aria-label="${esc(say)}">${n}</a></td>`;
         })
@@ -284,7 +291,7 @@ function renderGrid({ columns, rows, max }, generatedAt, t) {
     })
     .join('\n');
 
-  const gaps = breaks.map((b) => t(S.gapNote).replace('{from}', b.from).replace('{to}', b.to)).join('; ');
+  const gaps = breaks.map((b) => t(S.gapNote).replace('{from}', yearText(b.from, t)).replace('{to}', yearText(b.to, t))).join('; ');
   const breakNote = breaks.length ? ` ${t(S.capBreak).replace('{gaps}', gaps)}` : '';
 
   return `    <section class="grid-section" aria-labelledby="grid-h">
@@ -338,7 +345,7 @@ function renderPage(lang, t, events, counts, matrix, generatedAt) {
     }
     const flag = ev.dateVerified ? '' : ` <span class="flag" title="${esc(t(S.flagTitle))}">?</span>`;
     body += `      <article class="ev ev-${ev.project}" data-project="${ev.project}">
-        <div class="ev-year">${ev.year}${flag}</div>
+        <div class="ev-year">${esc(yearText(ev.year, t))}${flag}</div>
         <div class="ev-body">
           <span class="ev-project">${esc(ev.projectLabel)}</span>
           <h3><a href="${esc(ev.link)}">${esc(ev.title)}</a></h3>
