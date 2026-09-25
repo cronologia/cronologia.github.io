@@ -166,6 +166,13 @@ const GROUPS = [
     ],
   },
   {
+    heading: 'Jesus of Nazareth and the relics',
+    desc: "The life of Jesus of Nazareth as the Gospels, ancient historians and modern scholars date it, and the objects venerated as his relics — each one's first appearance in the record, the tests run on it, the acts of Church authorities about it, and where it is kept today. As in the apparition chronologies, an act of cult is recorded as what it is, never as a ruling on authenticity.",
+    cards: [
+      { id: 'cristo', cls: 'p-cristo', years: '6 BCE–present', title: 'Jesus of Nazareth and the relics', desc: "The life as the sources date it, with every disagreement kept — the birth before 4 BCE by Matthew or at the census of 6 CE by Luke, the crucifixion in 30 or 33 — and fourteen relics from the Shroud of Turin to the Holy Chalice, mapped where they are kept, with no Church act declaring any of them authentic located." },
+    ],
+  },
+  {
     heading: 'Intellectual biographies',
     desc: 'Chronologies of individual authors whose trajectories cross several of the other projects — documented as lives and works, with contested characterizations attributed, never adjudicated.',
     cards: [
@@ -186,14 +193,14 @@ const PRINCIPLES = [
 
 const S = {
   title: 'Cronologia — source-referenced chronologies of contested subjects',
-  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — twenty-three projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, and the intellectuals between them. Every fact cited to a public source.',
+  metaDesc: 'Open, source-referenced chronologies of contested subjects in political and religious history — twenty-four projects covering movements and institutions of the Catholic Church, the Latin American left, the Traditionalist School, reported Marian apparitions and the Church judgments on them, the relics attributed to Christ, and the intellectuals between them. Every fact cited to a public source.',
   subtitle: 'Source-referenced chronologies of contested subjects',
   lead: 'Timelines of organizations, movements and reported events in political and religious history — centred on Latin America, and following subjects beyond it where their story goes. Every fact cited to a public source, every uncertain date flagged, every contested claim attributed to its author. On argued-about ground, a verifiable timeline is more useful than another opinion.',
   masterStrong: '⏳ Master chronology →',
   masterSpan: 'All {events} events of the {projects} projects on one filterable timeline — see the intersections side by side.',
   glossaryStrong: '📖 Shared glossary →',
   glossarySpan: 'Cited definitions of the recurring terms, one page per term, so every chronology links to the same stable explanation instead of redefining it.',
-  groupingStrong: 'Twenty-three chronologies, grouped by subject area.',
+  groupingStrong: 'Twenty-four chronologies, grouped by subject area.',
   groupingNote: 'The groups below are a navigational aid, not a claim about the subjects. Projects listed together are not thereby asserted to share a programme, an alliance, an origin or an identity — several of them are opposed to each other, and the datasets document that with sources. Each chronology stands on its own.',
   howHeading: 'How these sites work',
   nextHeading: "What's next",
@@ -292,6 +299,7 @@ ${ANALYTICS}
       --aparecida: #1b2a5e; --aparecida-dark: #101b40;
       --corcao: #6e1f2c; --corcao-dark: #47131c;
       --mfs: #7b2d5e; --mfs-dark: #521d3f;
+      --cristo: #4338a0; --cristo-dark: #2d2570;
       --tl: #1b7a3d; --tl-dark: #114f27;
       --tariqa: #0e7490; --tariqa-dark: #0a4e60;
       --peren: #5b21b6; --peren-dark: #3b1580;
@@ -342,6 +350,7 @@ ${ANALYTICS}
     .p-aparecida { border-top-color: var(--aparecida); } .p-aparecida .years, .p-aparecida h3 { color: var(--aparecida-dark); }
     .p-corcao { border-top-color: var(--corcao); } .p-corcao .years, .p-corcao h3 { color: var(--corcao-dark); }
     .p-mfs { border-top-color: var(--mfs); } .p-mfs .years, .p-mfs h3 { color: var(--mfs-dark); }
+    .p-cristo { border-top-color: var(--cristo); } .p-cristo .years, .p-cristo h3 { color: var(--cristo-dark); }
     .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
     .p-tariqa { border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
     .p-peren { border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }
