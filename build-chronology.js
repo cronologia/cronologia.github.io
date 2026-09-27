@@ -326,7 +326,7 @@ function langSwitch(lang, t) {
 
 function renderPage(lang, t, events, counts, matrix, generatedAt) {
   const chipCss = PROJECTS.map(
-    (p) => `    .chip-${p.id} { --pc: ${p.color}; --pd: ${p.dark}; }\n    .ev-${p.id} { border-left-color: ${p.color}; } .ev-${p.id} .ev-project { color: ${p.dark}; }`
+    (p) => `    .chip-${p.id} { --pc: ${p.color}; --pd: ${p.dark}; }\n    .ev-${p.id} { --pc: ${p.color}; --pd: ${p.dark}; border-left-color: ${p.color}; } .ev-${p.id} .ev-project { color: ${p.dark}; }`
   ).join('\n');
 
   const chips = PROJECTS.map(
@@ -374,7 +374,7 @@ ${alt}
   <link rel="alternate" hreflang="x-default" href="${SITE}/chronology/">
 ${ANALYTICS}
   <style>
-    :root { --bg: #faf8f5; --surface: #ffffff; --ink: #1d2330; --muted: #6b7280; --line: #e4e0d8; --maxw: 920px; }
+    :root { --bg: #faf8f5; --surface: #ffffff; --ink: #1d2330; --muted: #595f6b; --line: #e4e0d8; --maxw: 920px; }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
@@ -407,6 +407,9 @@ ${chipCss}
     .pd-grid td.c { width: 2.4rem; height: 1.9rem; text-align: center; background: rgba(35, 40, 58, calc(var(--i, 0) * .85)); }
     .pd-grid td.c a { display: block; width: 100%; height: 100%; line-height: 1.9rem; color: var(--ink); text-decoration: none; font-variant-numeric: tabular-nums; }
     .pd-grid td.c.hi a { color: #fff; }
+    /* White text needs a dark enough cell: a 'hi' cell never sits in the band
+       (intensity .6-.75) where neither white nor ink text reaches 4.5:1. */
+    .pd-grid td.c.hi { background: rgba(35, 40, 58, calc(max(var(--i, 0), .8) * .85)); }
     .pd-grid td.c a:hover, .pd-grid td.c a:focus { outline: 2px solid #b8252b; outline-offset: -2px; }
     .pd-grid td.c0 { color: #c9c4ba; }
     .pd-grid td.gap { background: repeating-linear-gradient(-45deg, transparent 0 3px, var(--line) 3px 4px); width: 1.1rem; }
@@ -444,6 +447,18 @@ ${chipCss}
       .site-header { background: none; color: #000; }
       .site-header a.home { display: none; }
       a { text-decoration: none; color: inherit; }
+    }
+    /* Dark mode (core#122), matching the family's sites (core#113). */
+    @media screen and (prefers-color-scheme: dark) {
+      :root { color-scheme: dark; --bg: #121418; --surface: #1a1d23; --ink: #e4e6ea; --muted: #9ba2ae; --line: #2d313a; }
+      .i18n-disclaimer { background: #2a2416; border-bottom-color: #4a3d1f; color: #e7c58a; }
+      .chip:not(.on) { color: color-mix(in srgb, var(--pc, #888) 45%, #fff); }
+      .pd-grid td.c { background: rgba(214, 220, 234, calc(var(--i, 0) * .7)); }
+      .pd-grid td.c.hi a { color: #121418; }
+      .pd-grid td.c.hi { background: rgba(214, 220, 234, calc(max(var(--i, 0), .8) * .7)); }
+      .ev .ev-project { color: color-mix(in srgb, var(--pc, #888) 45%, #fff) !important; }
+      .flag { color: #f0a35a; }
+      .pd-grid td.c0 { color: #4a4f5a; }
     }
   </style>
 </head>

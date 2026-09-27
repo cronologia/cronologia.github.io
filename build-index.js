@@ -290,7 +290,7 @@ ${hreflangCluster('')}
 ${ANALYTICS}
   <style>
     :root {
-      --bg: #faf8f5; --surface: #ffffff; --ink: #1d2330; --muted: #6b7280;
+      --bg: #faf8f5; --surface: #ffffff; --ink: #1d2330; --muted: #595f6b;
       --line: #e4e0d8; --maxw: 920px;
       --fsp: #b8252b; --fsp-dark: #7a1418;
       --fsspx: #1e4f8f; --fsspx-dark: #12365f;
@@ -343,30 +343,30 @@ ${ANALYTICS}
     .project h3 { margin: 0; font-size: 1.12rem; }
     .project .years { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
     .project p { margin: .2rem 0 0; font-size: .9rem; color: var(--muted); }
-    .p-fsp { border-top-color: var(--fsp); } .p-fsp .years, .p-fsp h3 { color: var(--fsp-dark); }
-    .p-fsspx { border-top-color: var(--fsspx); } .p-fsspx .years, .p-fsspx h3 { color: var(--fsspx-dark); }
-    .p-kofc { border-top-color: var(--kofc); } .p-kofc .years, .p-kofc h3 { color: var(--kofc-dark); }
-    .p-medjugorje { border-top-color: var(--medjugorje); } .p-medjugorje .years, .p-medjugorje h3 { color: var(--medjugorje-dark); }
-    .p-aparecida { border-top-color: var(--aparecida); } .p-aparecida .years, .p-aparecida h3 { color: var(--aparecida-dark); }
-    .p-corcao { border-top-color: var(--corcao); } .p-corcao .years, .p-corcao h3 { color: var(--corcao-dark); }
-    .p-mfs { border-top-color: var(--mfs); } .p-mfs .years, .p-mfs h3 { color: var(--mfs-dark); }
-    .p-cristo { border-top-color: var(--cristo); } .p-cristo .years, .p-cristo h3 { color: var(--cristo-dark); }
-    .p-tl { border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
-    .p-tariqa { border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
-    .p-peren { border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }
-    .p-celam { border-top-color: var(--celam); } .p-celam .years, .p-celam h3 { color: var(--celam-dark); }
-    .p-puebla { border-top-color: var(--puebla); } .p-puebla .years, .p-puebla h3 { color: var(--puebla-dark); }
-    .p-tfp { border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
-    .p-rcc { border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
-    .p-olavo { border-top-color: var(--olavo); } .p-olavo .years, .p-olavo h3 { color: var(--olavo-dark); }
-    .p-guadalupe { border-top-color: var(--guadalupe); } .p-guadalupe .years, .p-guadalupe h3 { color: var(--guadalupe-dark); }
-    .p-gracas { border-top-color: var(--gracas); } .p-gracas .years, .p-gracas h3 { color: var(--gracas-dark); }
-    .p-lasalette { border-top-color: var(--lasalette); } .p-lasalette .years, .p-lasalette h3 { color: var(--lasalette-dark); }
-    .p-lourdes { border-top-color: var(--lourdes); } .p-lourdes .years, .p-lourdes h3 { color: var(--lourdes-dark); }
-    .p-fatima { border-top-color: var(--fatima); } .p-fatima .years, .p-fatima h3 { color: var(--fatima-dark); }
-    .p-lagrimas { border-top-color: var(--lagrimas); } .p-lagrimas .years, .p-lagrimas h3 { color: var(--lagrimas-dark); }
-    .p-cimbres { border-top-color: var(--cimbres); } .p-cimbres .years, .p-cimbres h3 { color: var(--cimbres-dark); }
-    .p-santos { border-top-color: var(--santos); } .p-santos .years, .p-santos h3 { color: var(--santos-dark); }
+    .p-fsp { --c: var(--fsp); border-top-color: var(--fsp); } .p-fsp .years, .p-fsp h3 { color: var(--fsp-dark); }
+    .p-fsspx { --c: var(--fsspx); border-top-color: var(--fsspx); } .p-fsspx .years, .p-fsspx h3 { color: var(--fsspx-dark); }
+    .p-kofc { --c: var(--kofc); border-top-color: var(--kofc); } .p-kofc .years, .p-kofc h3 { color: var(--kofc-dark); }
+    .p-medjugorje { --c: var(--medjugorje); border-top-color: var(--medjugorje); } .p-medjugorje .years, .p-medjugorje h3 { color: var(--medjugorje-dark); }
+    .p-aparecida { --c: var(--aparecida); border-top-color: var(--aparecida); } .p-aparecida .years, .p-aparecida h3 { color: var(--aparecida-dark); }
+    .p-corcao { --c: var(--corcao); border-top-color: var(--corcao); } .p-corcao .years, .p-corcao h3 { color: var(--corcao-dark); }
+    .p-mfs { --c: var(--mfs); border-top-color: var(--mfs); } .p-mfs .years, .p-mfs h3 { color: var(--mfs-dark); }
+    .p-cristo { --c: var(--cristo); border-top-color: var(--cristo); } .p-cristo .years, .p-cristo h3 { color: var(--cristo-dark); }
+    .p-tl { --c: var(--tl); border-top-color: var(--tl); } .p-tl .years, .p-tl h3 { color: var(--tl-dark); }
+    .p-tariqa { --c: var(--tariqa); border-top-color: var(--tariqa); } .p-tariqa .years, .p-tariqa h3 { color: var(--tariqa-dark); }
+    .p-peren { --c: var(--peren); border-top-color: var(--peren); } .p-peren .years, .p-peren h3 { color: var(--peren-dark); }
+    .p-celam { --c: var(--celam); border-top-color: var(--celam); } .p-celam .years, .p-celam h3 { color: var(--celam-dark); }
+    .p-puebla { --c: var(--puebla); border-top-color: var(--puebla); } .p-puebla .years, .p-puebla h3 { color: var(--puebla-dark); }
+    .p-tfp { --c: var(--tfp); border-top-color: var(--tfp); } .p-tfp .years, .p-tfp h3 { color: var(--tfp-dark); }
+    .p-rcc { --c: var(--rcc); border-top-color: var(--rcc); } .p-rcc .years, .p-rcc h3 { color: var(--rcc-dark); }
+    .p-olavo { --c: var(--olavo); border-top-color: var(--olavo); } .p-olavo .years, .p-olavo h3 { color: var(--olavo-dark); }
+    .p-guadalupe { --c: var(--guadalupe); border-top-color: var(--guadalupe); } .p-guadalupe .years, .p-guadalupe h3 { color: var(--guadalupe-dark); }
+    .p-gracas { --c: var(--gracas); border-top-color: var(--gracas); } .p-gracas .years, .p-gracas h3 { color: var(--gracas-dark); }
+    .p-lasalette { --c: var(--lasalette); border-top-color: var(--lasalette); } .p-lasalette .years, .p-lasalette h3 { color: var(--lasalette-dark); }
+    .p-lourdes { --c: var(--lourdes); border-top-color: var(--lourdes); } .p-lourdes .years, .p-lourdes h3 { color: var(--lourdes-dark); }
+    .p-fatima { --c: var(--fatima); border-top-color: var(--fatima); } .p-fatima .years, .p-fatima h3 { color: var(--fatima-dark); }
+    .p-lagrimas { --c: var(--lagrimas); border-top-color: var(--lagrimas); } .p-lagrimas .years, .p-lagrimas h3 { color: var(--lagrimas-dark); }
+    .p-cimbres { --c: var(--cimbres); border-top-color: var(--cimbres); } .p-cimbres .years, .p-cimbres h3 { color: var(--cimbres-dark); }
+    .p-santos { --c: var(--santos); border-top-color: var(--santos); } .p-santos .years, .p-santos h3 { color: var(--santos-dark); }
     .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
     .principles li { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .9rem 1.1rem; font-size: .92rem; }
     .principles strong { display: block; margin-bottom: .2rem; }
@@ -380,6 +380,17 @@ ${ANALYTICS}
     .site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .85rem; }
     .site-footer p { margin: 0 0 .4rem; max-width: 78ch; }
     .site-footer a { color: var(--muted); }
+    /* Dark mode (core#122): the family's sites follow the reader's system
+       setting (core#113); the portal between them now does too. Each card's
+       colour is its site's accent (--c), lightened for text on the dark card. */
+    @media screen and (prefers-color-scheme: dark) {
+      :root { color-scheme: dark; --bg: #121418; --surface: #1a1d23; --ink: #e4e6ea; --muted: #9ba2ae; --line: #2d313a; --ref: #9ba2ae; }
+      .project .years, .project h3 { color: color-mix(in srgb, var(--c, var(--muted)) 45%, #fff) !important; }
+      .project { border-top-color: var(--c, var(--muted)); }
+      a.project:hover { box-shadow: 0 4px 14px rgba(0,0,0,.45); }
+      .i18n-disclaimer { background: #2a2416; border-bottom-color: #4a3d1f; color: #e7c58a; }
+      .roadmap a { color: #e3a24f; }
+    }
   </style>
 </head>
 <body>${disclaimer}
