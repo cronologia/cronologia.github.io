@@ -48,6 +48,38 @@
       --santos: #8a6a16; --santos-dark: #5c460e;
       --ref: #4b5563;
     }
+    /* Each card's dark shade derives from its site's one accent (core#118,
+       core#122): the literal pairs above are the fallback for a browser
+       without relative colour syntax, and build-drift checks every accent
+       above against the site's own --accent. */
+    @supports (color: oklch(from red l c h)) {
+      :root {
+        --fsp-dark: oklch(from var(--fsp) calc(l * .76) c h);
+        --fsspx-dark: oklch(from var(--fsspx) calc(l * .76) c h);
+        --kofc-dark: oklch(from var(--kofc) calc(l * .76) c h);
+        --medjugorje-dark: oklch(from var(--medjugorje) calc(l * .76) c h);
+        --aparecida-dark: oklch(from var(--aparecida) calc(l * .76) c h);
+        --corcao-dark: oklch(from var(--corcao) calc(l * .76) c h);
+        --mfs-dark: oklch(from var(--mfs) calc(l * .76) c h);
+        --cristo-dark: oklch(from var(--cristo) calc(l * .76) c h);
+        --tl-dark: oklch(from var(--tl) calc(l * .76) c h);
+        --tariqa-dark: oklch(from var(--tariqa) calc(l * .76) c h);
+        --peren-dark: oklch(from var(--peren) calc(l * .76) c h);
+        --celam-dark: oklch(from var(--celam) calc(l * .76) c h);
+        --puebla-dark: oklch(from var(--puebla) calc(l * .76) c h);
+        --tfp-dark: oklch(from var(--tfp) calc(l * .76) c h);
+        --rcc-dark: oklch(from var(--rcc) calc(l * .76) c h);
+        --olavo-dark: oklch(from var(--olavo) calc(l * .76) c h);
+        --guadalupe-dark: oklch(from var(--guadalupe) calc(l * .76) c h);
+        --gracas-dark: oklch(from var(--gracas) calc(l * .76) c h);
+        --lasalette-dark: oklch(from var(--lasalette) calc(l * .76) c h);
+        --lourdes-dark: oklch(from var(--lourdes) calc(l * .76) c h);
+        --fatima-dark: oklch(from var(--fatima) calc(l * .76) c h);
+        --lagrimas-dark: oklch(from var(--lagrimas) calc(l * .76) c h);
+        --cimbres-dark: oklch(from var(--cimbres) calc(l * .76) c h);
+        --santos-dark: oklch(from var(--santos) calc(l * .76) c h);
+      }
+    }
     * { box-sizing: border-box; }
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
